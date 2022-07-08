@@ -1,0 +1,78 @@
+{
+    "anime": [{
+
+            "id": 6,
+            "name": "Blood-C",
+            "alternative": "",
+            "description": "Peaceful schoolgirl by day, fearsome monster slayer by night, Saya Kisaragi is leading a split life. Equipped with a ceremonial sword given to her by her father for sacred tasks, she vanquishes every monster who dares threaten her quiet little village. But all too soon, Saya's reality and everything she believes to be true is tested, when she overhears the monsters speak of a broken covenant— something she knows nothing about.And then, unexpectedly, a strange dog appears;it asks her to whom she promised to protect the village, curious as to what would happen if she were to break that promise.Tormented by unexplainable visions and her world unraveling around her, we travel with Saya through her struggle to find a way to the truth in a village where nothing is as it seems.",
+            "Episodes": 12,
+            "Gore level": ,
+            "Genre": "",
+            "Status": "Complete",
+            "Studios": "Production I.G"
+        },
+        {
+            "id": 7,
+            "name": "When They Cry",
+            "alternative": "Higurashi no Naku Koro ni",
+            "Description": "Keiichi Maebara has just moved to the quiet little village of Hinamizawa in the summer of 1983, and quickly becomes inseparable friends with schoolmates Rena Ryuuguu, Mion Sonozaki, Satoko Houjou, and Rika Furude. However, darkness lurks underneath the seemingly idyllic life they lead. As the village prepares for its annual festival, Keiichi learns about the local legends surrounding it. To his horror, he discovers that there have been several murders and disappearances in the village in the recent years, and that they all seem to be connected to the festival and the village's patron god, Oyashiro.Keiichi tries to ask his new friends about these incidents, but they are suspiciously silent and refuse to give him the answers he needs.As more and more bizarre events occur, he wonders just what else his friends might be keeping from him, and if he can even trust them at all.When madness and paranoia begin taking root in Keiichi's heart, he will stumble straight into the mysteries at work in Higurashi no Naku Koro ni, a story that is told across multiple arcs.",
+            "Episodes": 11,
+            "Gore level": ,
+            "Genre": ,
+            "Status": "Complete",
+            "Studios": "Studios Deen"
+        },
+        {
+            "id": 8,
+            "name": "From the New World",
+            "alternative": "Shinsekai yori",
+            "Description": "In the town of Kamisu 66, 12-year-old Saki Watanabe has just awakened to her psychic powers and is relieved to rejoin her friends—the mischievous Satoru Asahina, the shy Mamoru Itou, the cheerful Maria Akizuki, and Shun Aonuma, a mysterious boy whom Saki admires—at Sage Academy, a special school for psychics. However, unease looms as Saki begins to question the fate of those unable to awaken to their powers, and the children begin to get involved with secretive matters such as the rumored Tainted Cats said to abduct children. Shinsekai yori tells the unique coming-of-age story of Saki and her friends as they journey to grow into their roles in the supposed utopia. Accepting these roles, however, might not come easy when faced with the dark and shocking truths of society, and the impending havoc born from the new world.",
+            "Episodes": 25,
+            "Gore level": ,
+            "Genre": "",
+            "Status": "Complete",
+            "Studios": "A-1 Pictures"
+        },
+        {
+            "id": 9,
+            "name": "Danganronpa: The Animationn",
+            "alternative": "Danganronpa:Kibou no Gakuen to Zetsubou no Koukousei-The Animation",
+            "Description": "Hope"
+            s Peak Academy is an elite high school that accepts only the most talented students.Individuals who successfully enroll receive their own unique titles,
+            suitably reflective of their skills and traits.Of the fifteen candidates admitted to the peculiar school that year,
+            Makoto Naegi is a completely ordinary individual who has been accepted by sheer chance,
+            with the title of "Super High School-Level Luck."
+            Naegi and his fellow classmates are initially ecstatic to be chosen to study at this prestigious institution,
+            but these feelings of happiness are short - lived.They are soon confronted by Monokuma,
+            the principal and resident bear,
+            who traps them inside the school.The pupils " hopes of escape and graduation hinge on one of them successfully murdering one of their peers without being discovered. However, if the killer is caught, he or she will be executed, and the remaining survivors will be left to continue the deathmatch until only a single victor remains.",
+            "Episodes": 13,
+            "Gore level": ,
+            "Genre": ,
+            "Status": "Completed",
+            "Studios": "Lerche"
+        },
+        {
+            "id": 10,
+            "name": "Devilman Crybaby",
+            "alternative": "",
+            "Description": "Devils cannot take form without a living host. However, if the will of an individual is strong enough, they can overcome the demon and make its power their own, becoming a Devilman. Weak and unassuming, Akira Fudou has always had a bleeding heart. So when his childhood friend Ryou Asuka asks for his help in uncovering devils, Akira accepts without hesitation. However, to Akira"
+            s surprise,
+            the place they go to is Sabbath: an immoral party of debauchery and degeneracy.Amidst bloodshed and death,
+            demons possess the partiers,
+            turning their bodies into grotesque monsters,
+            and begin wreaking havoc.In a reckless attempt to save his best friend,
+            Akira unwittingly merges with the devil Amon and becomes a Devilman,
+            gaining the power to defeat the remaining demons.Though it grants him great power,
+            this new partnership awakens an insatiable and primeval part of Akira.Having the body of a devil but the same crybaby heart,
+            Akira works alongside Ryou,
+            destroying those that harm humanity and his loved ones.
+            ",
+            "Episodes": 10,
+            "Gore level": ,
+            "Genre": ,
+            "Status": "Complete",
+            "Studios": "Science SARU"
+        }
+    ]
+}
