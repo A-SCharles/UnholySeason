@@ -1,9 +1,38 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link :to="{ name: 'animes' }">Animes</router-link>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Unholy Season</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <router-link to="/">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </router-link>
+
+          <router-link to="/about">
+            <a class="nav-link">About</a>
+          </router-link>
+
+          <router-link :to="{ name: 'animes' }">
+            <a class="nav-link">Anime List</a>
+          </router-link>
+
+          <!-- <a class="nav-link disabled">Disabled</a> -->
+        </div>
+      </div>
+    </div>
   </nav>
+
   <router-view />
 </template>
 

@@ -1,22 +1,9 @@
 <template>
   <h2>I am Working</h2>
-  <div v-if="animes">
+  <div v-if="animes" class="bg-dark">
     <div class="container">
       <div class="row">
-        <!-- <lists v-for="anime of animes" :key="anime.id" /> -->
-        <div
-          class="card m-3 p-3"
-          v-for="anime of animes"
-          :key="anime.id"
-          style="width: 18rem"
-        >
-          <img :src="anime.image" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">{{ anime.name }}</h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
+        <lists />
       </div>
     </div>
   </div>
@@ -30,19 +17,12 @@
 import lists from "@/components/lists.vue";
 export default {
   components: { lists },
-  data() {
+   data() {
     return {
-      animes: null,
+      animes: []
     };
   },
-
-  mounted() {
-    fetch("http://localhost:3000/anime")
-      .then(res => res.json())
-      .then(data => this.animes = data)
-      .catch((err) => console.log(err.message));
-  },
-};
+  };
 </script>
 
 <style>
@@ -50,5 +30,4 @@ export default {
   height: 125px;
   width: 100%;
 }
-
 </style>

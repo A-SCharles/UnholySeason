@@ -13,9 +13,15 @@ const routes = [
     component: () => import('../views/AboutView.vue')
   },
   {
-    path: '/src/views/animes.vue',
+    path: '/animes',
     name: 'animes',
     component: () => import('../views/animes.vue')
+  },
+  {
+    path: '/animes/:id',
+    name: 'anime',
+    component: () => import('../views/animeDetail.vue'),
+    props: true
   }
 ]
 

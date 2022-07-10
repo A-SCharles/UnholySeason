@@ -1,25 +1,35 @@
 <template>
-      <div class="card" style="width: 18rem">
-        <img src="" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">{{ anime.name }}</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+  <div
+    class="card mx-auto m-3 p-3"
+    v-for="anime of animes"
+    :key="anime.id"
+    style="width: 18rem"
+  >
+    <img :src="anime.image" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ anime.name }}</h5>
+      <p class="card-text"></p>
+      <router-link :to="{name: 'anime', params: {id: anime.id}}">
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+      </router-link>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  data() {
+ data() {
     return {
-      anime: null
-    };
-  }
-};
+      animes: [],
+    }
+},
+  mounted() {
+    fetch("http://localhost:3000/anime")
+      .then((res) => res.json())
+      .then((data) => (this.animes = data))
+      .catch((err) => console.log(err));
+  },
+}
 </script>
 
 <style>
