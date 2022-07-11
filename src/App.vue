@@ -1,7 +1,13 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Unholy Season</a>
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black" style="height: 10vh" >
+
+    <div class="container ">
+
+      <a style="font-size: 3vw; color: #FF0000" class="navbar-brand " href="#">
+        𝖀𝖓𝖍𝖔𝖑𝖞 𝕾𝖊𝖆𝖘𝖔𝖓
+      </a>
+
       <button
         class="navbar-toggler"
         type="button"
@@ -11,26 +17,43 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
+
         <span class="navbar-toggler-icon"></span>
+
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
         <div class="navbar-nav">
+
           <router-link to="/">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+
+            <a style="font-size: 30px;" class="nav-link active" aria-current="page" href="#">
+              𝖍𝖔𝖒𝖊
+            </a>
+
           </router-link>
 
           <router-link to="/about">
-            <a class="nav-link">About</a>
+
+            <a style="font-size: 30px;" class="nav-link">
+              𝖆𝖇𝖔𝖚𝖙
+            </a>
+
           </router-link>
 
           <router-link :to="{ name: 'animes' }">
-            <a class="nav-link">Anime List</a>
+
+            <a style="font-size: 30px;" class="nav-link">
+              𝖆𝖓𝖎𝖒𝖊𝖑𝖎𝖘𝖙
+            </a>
+
           </router-link>
 
-          <!-- <a class="nav-link disabled">Disabled</a> -->
         </div>
       </div>
     </div>
+    
   </nav>
 
   <router-view />
@@ -38,23 +61,39 @@
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+
+  /*font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;*/
+
   text-align: center;
   color: #2c3e50;
 }
 
 nav {
   padding: 30px;
+  
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: red;
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+a{
+  text-decoration: none;
+  color: #FF0000 !important; 
+}
+
+#navbarNavAltMarkup{
+  display: flex !important;
+  justify-content: end !important;
+}
 </style>
+
+
+
