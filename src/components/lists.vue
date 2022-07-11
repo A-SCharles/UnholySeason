@@ -5,7 +5,8 @@
     :key="anime.id"
     style="width: 18rem"
   >
-    <img :src="anime.image" class="card-img-top" alt="..." />
+    <img :src="anime.anime_Gif" id="show" class="card-img-top" alt="..." />
+    <img :src="anime.image" id="hide" class="card-img-top" alt="..." />
     <div class="card-body">
       <h5 class="card-title">{{ anime.name }}</h5>
       <p class="card-text"></p>
@@ -18,7 +19,7 @@
 
 <script>
 export default {
- data() {
+data() {
     return {
       animes: [],
     }
@@ -33,4 +34,5 @@ export default {
 </script>
 
 <style>
+
 </style>
