@@ -35,15 +35,12 @@ data() {
         password: ''
     }
 },
-
+mounted() {
 // checks if user exists in db
-methods: {
-    login() {
-         fetch(`http://localhost:3000/users?email=${email}&password=${password}`)
-        console.log('Success')    
-    }
+    this.$store.dispatch("getUser") 
 },
 }
+
 </script>
 
 <style>

@@ -3,10 +3,11 @@
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black">
 
     <div class="container">
-
+      <router-link to="/">
       <a style="font-size: 3vw; color: #FF0000" class="navbar-brand " href="#">
         𝖀𝖓𝖍𝖔𝖑𝖞 𝕾𝖊𝖆𝖘𝖔𝖓
       </a>
+      </router-link>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,11 +64,6 @@
 
 <style>
 #app {
-
-  /*font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;*/
-
   text-align: center;
   color: #2c3e50;
 }
@@ -92,10 +88,6 @@ a {
   color: #FF0000 !important;
 }
 
-/* #navbarNavAltMarkup{
-  display: flex !important;
-  justify-content: end !important;
-} */
 </style>
 
 

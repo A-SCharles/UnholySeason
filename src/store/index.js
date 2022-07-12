@@ -5,7 +5,7 @@ export default createStore({
     // variables to store data from JSON
     animes: null,
     anime: null,
-    users: null
+    user: null
   },
   getters: {
     
@@ -15,19 +15,32 @@ export default createStore({
     setAnimes:(state, animes) => {
       state.animes = animes
     },
+    // passes retrieved data into anime variable
     setAnime:(state, anime) => {
       state.anime = anime
+    },
+    // passes retrieved user into user variable
+    setUser: (state, user) => {
+      state.user = user
     }
   },
   actions: {
-    getAnime(context, payload){
-      context.commit('setAnime',payload.anime)
-    },
-    // Retrieving data from JSON file
-    getData:context => {
+    // Retrieving all data from JSON file
+    getAnimes: async (context)=> {
       fetch("http://localhost:3000/anime")
       .then((res) => res.json())
       .then((animes) => context.commit('setAnimes', animes))
+    },
+    // Retrieves single object in data 
+    getAnime: async (context, id) => {
+      fetch("http://localhost:3000/anime/" + id)
+      .then((res) => res.json())
+      .then((anime) => context.commit('setAnime', anime))
+    },
+    // Checks if user exists in db
+    login: async (context, payload) => {
+        // vars for email and pass
+      
     }
   },
   modules: {

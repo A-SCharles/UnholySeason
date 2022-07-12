@@ -13,29 +13,9 @@
 </template>
 
 <script>
-import store from '@/store';
-import { mapActions } from 'vuex';
-
 export default {
   props: ['anime'],
-  methods:{
-    // ...mapActions(['getAnime'])
-  },
-  // data() {
-  //     return {
-  //       animes: [],
-  //     }
-  // },
-  mounted() {
-    // fetch("http://localhost:3000/anime")
-    //   .then((res) => res.json())
-    //   .then((data) => (this.animes = data))
-    //   .catch((err) => console.log(err));
-  // this.$store.dispatch("getData")
-  },
-  computed: {
-    
-  },
+
 }
 </script>
 

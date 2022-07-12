@@ -37,7 +37,7 @@ export default {
   },
 
   mounted() {
-    this.$store.dispatch("getData")
+    this.$store.dispatch("getAnimes")
   },
 
   computed: {
@@ -45,19 +45,9 @@ export default {
       return this.$store.state.animes
     },
     sorted() {
-      // console.log("im here")
       let sortedA = this.$store.state.animes.reverse()
-      // console.log(sortedA)
       return sortedA.slice(0, 3)
     }
-  },
-  methods: {
-    // sorted() {
-    //   console.log("im here")
-    //   let sortedA = this.$store.state.animes
-    //   console.log(sortedA)
-    //   return sortedA.reverse()
-    // }
   },
 }
 
