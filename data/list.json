@@ -159,5 +159,11 @@
             "Studios": "Science SARU",
             "dateAired": "Jan 5, 2018"
         }
-    ]
+    ],
+
+    "users": [{
+        "email" : "charles@gmail.com",
+        "password": "password",
+        "image": "https://i.postimg.cc/vZN1w24D/squirtle.gif" 
+    }]
 }

@@ -8,9 +8,6 @@
 
     <hr />
 
-    <!-- <div v-for="anime in sorted" :key="anime.id">
-      <h2>{{ anime.id }}</h2>
-    </div> -->
     <div v-if="animes">
       <div class="row">
         <Lists v-for="anime in sorted" :key="anime.id" :anime="anime" />

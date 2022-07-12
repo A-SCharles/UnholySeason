@@ -6,7 +6,7 @@
       <h5 class="card-title">{{ anime.name }}</h5>
       <p class="card-text"></p>
       <router-link :to="{ name: 'anime', params: { id: anime.id } }">
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary" @click="getAnime({anime})">Go somewhere</a>
       </router-link>
     </div>
   </div>
@@ -14,9 +14,13 @@
 
 <script>
 import store from '@/store';
+import { mapActions } from 'vuex';
 
 export default {
   props: ['anime'],
+  methods:{
+    // ...mapActions(['getAnime'])
+  },
   // data() {
   //     return {
   //       animes: [],
@@ -30,10 +34,7 @@ export default {
   // this.$store.dispatch("getData")
   },
   computed: {
-    animes() {
-      // return this.$store.state.animes
-      
-    }
+    
   },
 }
 </script>

@@ -43,6 +43,12 @@
 
           </router-link>
 
+          <router-link :to="{ name: 'login' }">
+            <a style="font-size: 30px;" class="nav-link">
+              Login
+            </a>
+          </router-link>
+
         </div>
       </div>
     </div>

@@ -2,18 +2,27 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    // variable to store data from JSON
-    animes: null
+    // variables to store data from JSON
+    animes: null,
+    anime: null,
+    users: null
   },
   getters: {
-    // sortedArray : state =>  state.animes.reverse()  
+    
   },
   mutations: {
+    // passes retrieved data into animes variable
     setAnimes:(state, animes) => {
       state.animes = animes
+    },
+    setAnime:(state, anime) => {
+      state.anime = anime
     }
   },
   actions: {
+    getAnime(context, payload){
+      context.commit('setAnime',payload.anime)
+    },
     // Retrieving data from JSON file
     getData:context => {
       fetch("http://localhost:3000/anime")

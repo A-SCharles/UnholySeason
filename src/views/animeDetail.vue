@@ -33,17 +33,24 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 export default {
   props: ["id"],
   data() {
     return {
-      anime: null,
+      anime: this.$store.state.anime || this.id  
     };
   },
   mounted() {
-    fetch("http://localhost:3000/anime/" + this.id)
-      .then((res) => res.json())
-      .then((data) => (this.anime = data));
+    // mapActions([`getAnimes(${this.animes})`])
+    // fetch("http://localhost:3000/anime/" + this.id)
+    //   .then((res) => res.json())
+    //   .then((data) => (this.anime = data));
+  },
+
+  //
+  computed: {
+    
   },
 };
 </script>
