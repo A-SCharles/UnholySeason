@@ -3,7 +3,7 @@
   <div v-if="animes" class="bg-dark">
     <div class="container">
       <div class="row">
-        <lists />
+        <lists v-for="anime of animes" :key="anime.id" :anime="anime" />
       </div>
     </div>
   </div>
@@ -17,11 +17,20 @@
 import lists from "@/components/lists.vue";
 export default {
   components: { lists },
-  data() {
-    return {
-      animes: []
-    };
+  // data() {
+  //   return {
+  //     animes: []
+  //   };
+  // },
+  mounted() {
+    this.$store.dispatch("getData")
   },
+
+  computed: {
+    animes() {
+      return this.$store.state.animes
+    }
+  }
 };
 </script>
 
@@ -38,7 +47,7 @@ export default {
 #hide {
   background-color: rgba(169, 164, 164, 0.5);
   color: black;
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
