@@ -1,5 +1,4 @@
 <template>
-  <h2>I am Working</h2>
   <div v-if="animes" class="bg-dark">
     <div class="container">
       <div class="row">
