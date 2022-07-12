@@ -44,6 +44,7 @@ export default {
       return this.$store.state.animes
     },
     sorted() {
+      // reverses array and limits it to 3
       let sortedA = this.$store.state.animes.reverse()
       return sortedA.slice(0, 3)
     }

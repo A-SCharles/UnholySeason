@@ -42,17 +42,23 @@
 
           </router-link>
 
-          <router-link :to="{ name: 'animes' }">
 
+          <router-link :to="{ name: 'animes' }">
             <a style="font-size: 30px;" class="nav-link">
               𝖆𝖓𝖎𝖒𝖊𝖑𝖎𝖘𝖙
             </a>
-
           </router-link>
 
+          
           <router-link :to="{ name: 'login' }">
             <a style="font-size: 30px;" class="nav-link">
               Login
+            </a>
+          </router-link>
+
+          <router-link :to="{ name: 'register' }">
+            <a style="font-size: 30px;" class="nav-link">
+              | Register
             </a>
           </router-link>
 
