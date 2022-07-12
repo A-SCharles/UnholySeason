@@ -1,5 +1,6 @@
 <template>
   <div v-if="anime">
+
     <div class="container h-100">
       <div
         id="test"
@@ -10,6 +11,7 @@
             <p>Anime info</p>
           </div>
           <div class="row">
+
             <div class="col-5">
               <img id="img" :src="anime.desc_image" alt="..." />
             </div>

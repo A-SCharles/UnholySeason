@@ -35,6 +35,12 @@
             </a>
 
           </router-link>
+          <router-link to="/contact">
+            <a style="font-size: 30px;" class="nav-link">
+              𝕮𝖔𝖓𝖙𝖆𝖈𝖙
+            </a>
+
+          </router-link>
 
           <router-link :to="{ name: 'animes' }">
 
