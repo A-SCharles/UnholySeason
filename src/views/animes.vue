@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style>
-.card img {
+/* .card img {
   height: 125px;
   width: 100%;
 }
@@ -61,5 +61,5 @@ export default {
 
 #hide:hover {
   opacity: 1;
-}
+} */
 </style>

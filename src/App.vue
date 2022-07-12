@@ -1,22 +1,15 @@
 <template>
 
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black" style="height: 10vh" >
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black">
 
-    <div class="container ">
+    <div class="container">
 
       <a style="font-size: 3vw; color: #FF0000" class="navbar-brand " href="#">
         𝖀𝖓𝖍𝖔𝖑𝖞 𝕾𝖊𝖆𝖘𝖔𝖓
       </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 
         <span class="navbar-toggler-icon"></span>
 
@@ -24,7 +17,7 @@
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
-        <div class="navbar-nav">
+        <div class="navbar-nav justify-content-between">
 
           <router-link to="/">
 
@@ -59,11 +52,14 @@
         </div>
       </div>
     </div>
-    
+
   </nav>
+
 
   <router-view />
 </template>
+
+<script></script>
 
 <style>
 #app {
@@ -78,27 +74,28 @@
 
 nav {
   padding: 30px;
-  
+
 }
 
 nav a {
   font-weight: bold;
   color: red;
+
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
 }
 
-a{
+a {
   text-decoration: none;
-  color: #FF0000 !important; 
+  color: #FF0000 !important;
 }
 
-#navbarNavAltMarkup{
+/* #navbarNavAltMarkup{
   display: flex !important;
   justify-content: end !important;
-}
+} */
 </style>
 
 
