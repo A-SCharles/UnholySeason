@@ -1,15 +1,20 @@
 <template>
   <div v-if="anime">
+
     <div class="container h-100">
       <div id="test" class="row h-100 d-flex justify-content-center align-items-center">
         <div class="card p-3 bg-black text-white">
+
             <div class="bg-warning mb-3">
                 <p>Anime info</p>
             </div>
+
           <div class="row">
+
             <div class="col-5">
               <img id="img" :src="anime.desc_image" alt="..." />
             </div>
+            
             <div class="col-7 mx-auto   ">
               <div class="card-body">
                 <h3 class="card-title">{{ anime.name }}</h3>
