@@ -6,16 +6,19 @@ export default createStore({
     animes: null
   },
   getters: {
+    // sortedArray : state =>  state.animes.reverse()  
   },
   mutations: {
+    setAnimes:(state, animes) => {
+      state.animes = animes
+    }
   },
   actions: {
     // Retrieving data from JSON file
     getData:context => {
       fetch("http://localhost:3000/anime")
       .then((res) => res.json())
-      .then((data) => (context.state.animes = data))
-      .catch((err) => console.log(err));
+      .then((animes) => context.commit('setAnimes', animes))
     }
   },
   modules: {

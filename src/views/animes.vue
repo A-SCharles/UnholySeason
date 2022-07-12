@@ -1,5 +1,4 @@
 <template>
-  <h2>I am Working</h2>
   <div v-if="animes" class="bg-dark">
     <div class="container">
       <div class="row">
@@ -35,7 +34,7 @@ export default {
 </script>
 
 <style>
-.card img {
+/* .card img {
   height: 125px;
   width: 100%;
 }
@@ -62,5 +61,5 @@ export default {
 
 #hide:hover {
   opacity: 1;
-}
+} */
 </style>
