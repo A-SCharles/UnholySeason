@@ -46,8 +46,11 @@
             <a style="font-size: 30px;" class="nav-link">
               𝖆𝖓𝖎𝖒𝖊𝖑𝖎𝖘𝖙
             </a>
-
+            
           </router-link>
+
+          <font-awesome-icon icon="fa-solid fa-user-secret" inverse />
+          <font-awesome-icon icon="fa-solid fa-user" inverse />
 
         </div>
       </div>
