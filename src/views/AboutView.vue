@@ -30,7 +30,7 @@
 
         <!-- Xena -->
         <div class="image col-3">
-            <img class="image__img" src="https://i.postimg.cc/W4JCSdLz/hdrs4hh26kd81.jpg" alt="Bricks">
+            <img class="image__img" src="https://i.postimg.cc/W4JCSdLz/hdrs4hh26kd81.jpg" alt="Bricks" style="height: 300px;">
 
             <div class="image__overlay image__overlay--blur">   
 
@@ -48,7 +48,7 @@
         <!-- ridhaa  -->
         <div class="image col-3">
 
-            <img class="image__img" src="https://i.postimg.cc/Bn03LxRN/ken-kaneki.jpg" alt="Bricks">
+            <img class="image__img" src="https://i.postimg.cc/Bn03LxRN/ken-kaneki.jpg" alt="Bricks" style="height: 300px;">
 
             <div class="image__overlay image__overlay--blur">
 
@@ -64,7 +64,7 @@
 
         <!-- Joshe -->
         <div class="image col-3">
-            <img class="image__img" src="https://i.postimg.cc/c4snPzFR/black-girl2.jpg" alt="Bricks">
+            <img class="image__img" src="https://i.postimg.cc/c4snPzFR/black-girl2.jpg" alt="Bricks" style="height: 300px;">
 
             <div class="image__overlay image__overlay--blur">
                 <div class="image__title" style='color: red'>
@@ -79,7 +79,7 @@
 
         <!-- Charles  -->
         <div class="image col-3">
-            <img class="image__img" src="https://i.postimg.cc/jSyC5Q3x/squirtle2.jpg" alt="Bricks">
+            <img class="image__img" src="https://i.postimg.cc/jSyC5Q3x/squirtle2.jpg" alt="Bricks" style="height: 300px;">
 
             <div class="image__overlay image__overlay--blur">
                 <div class="image__title" style='color: red'>

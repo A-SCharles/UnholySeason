@@ -3,7 +3,7 @@
   <!-- anime list div  -->
   <div
     class="card mx-auto m-5 p-0"
-    style="width: 35rem; position: relative; height: 350px; margin-bottom: 40px; display: flex; jus"
+    style="width: 35rem; position: relative; height: 350px; margin-bottom: 40px;"
   >
     <!-- anime list info -->
     <router-link :to="{ name: 'anime', params: { id: anime.id } }">
