@@ -1,26 +1,22 @@
 <template>
-  <div class="home d-flex justify-content-center align-items-center">
-
-    <div>
-      <h1 class="" style="color: white; font-size: 5vw; margin-bottom: 1rem " data-aos="fade-up"
+  <div class="home">
+    <div id="home" class="container d-flex justify-content-center align-items-center vh-100">
+      <div class="d-inline-block">
+      <h1 style="color: white; font-size: 5vw; margin-bottom: 1rem" data-aos="fade-up"
      data-aos-duration="2000">
         𝖂𝖊𝖑𝖈𝖔𝖒𝖊 𝕿𝖔 𝖀𝖓𝖍𝖔𝖑𝖞 𝕾𝖊𝖆𝖘𝖔𝖓
-      </h1>
-      <div class="container">
+      </h1> <br>
       <p class="text-center" style="color: red; word-wrap: break-word;" data-aos="fade-up"
      data-aos-duration="2000">
         Our site is dedicated to the love of Horror and the diverse variations of it. Some of the content displayed may not be suitable for 
-        curtain users, so by continuing you are gaining acceptance of that risk. Join us when you are ready for the nightmare to begin  
+        certain users, so by continuing you are gaining acceptance of that risk. Join us when you are ready for the nightmare to begin  
       </p>
-
       </div>
-      
     </div>
-
   </div>
 
   <div style="height: 20vh; margin-top: 5rem;">
-    <p class="" style='color: #FF0000; font-size: 60px' data-aos="fade-up"
+    <p style='color: #FF0000; font-size: 60px' data-aos="fade-up"
      data-aos-duration="2000">
       𝕽𝖊𝖈𝖊𝖓𝖙𝖑𝖞 𝖆𝖉𝖉𝖊𝖉
     </p>
@@ -30,13 +26,13 @@
     </p>
   </div>
 
-  <hr/>
-  
  <div>
   <div v-if="animes">
+    <div class="container">
       <div class="row">
         <Lists v-for="anime in sorted" :key="anime.id" :anime="anime" />
       </div>
+    </div>
     </div>
 
     <div v-else>
@@ -45,10 +41,6 @@
       </h2>
     </div>
   </div>
-
-
-    
-
 </template>
 
 <script>
@@ -85,7 +77,7 @@ export default {
 .home {
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 0) 50%,
       #000000 99%
     ),
     url("https://i.postimg.cc/yxgvWZPB/asta-demon-landing.gif");
@@ -93,7 +85,6 @@ export default {
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
-
   background-position: center;
 }
 </style>

@@ -183,6 +183,18 @@
       "email": "charles@gmail.com",
       "password": "pass",
       "id": 2
+    },
+    {
+      "name": "Boi",
+      "email": "charles2@gmail.com",
+      "password": "pass",
+      "id": 3
+    },
+    {
+      "name": "Boii",
+      "email": "charles3@gmail.com",
+      "password": "pass",
+      "id": 4
     }
   ]
 }
