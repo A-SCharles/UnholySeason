@@ -169,5 +169,11 @@
             "dateAired": "Jan 5, 2018",
             "trailer": "https://www.youtube.com/embed/ww06yGPM7Kc"
         }
-    ]
+    ],
+
+    "users": [{
+        "email" : "charles@gmail.com",
+        "password": "password",
+        "image": "https://i.postimg.cc/vZN1w24D/squirtle.gif" 
+    }]
 }

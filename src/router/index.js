@@ -13,6 +13,11 @@ const routes = [
     component: () => import('../views/AboutView.vue')
   },
   {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/Contact.vue')
+  },
+  {
     path: '/animes',
     name: 'animes',
     component: () => import('../views/animes.vue')
@@ -22,7 +27,17 @@ const routes = [
     name: 'anime',
     component: () => import('../views/animeDetail.vue'),
     props: true
-  }
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: () => import('../views/register.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/login.vue')
+  },
 ]
 
 const router = createRouter({

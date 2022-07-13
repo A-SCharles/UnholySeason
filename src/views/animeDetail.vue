@@ -1,50 +1,115 @@
 <template>
+
   <div v-if="anime">
+
     <div class="container h-100">
-      <div
-        id="test"
-        class="row h-100 d-flex justify-content-center align-items-center"
-      >
+
+      <div id="test" class="row h-100 d-flex justify-content-center align-items-center">
+
         <div class="card p-3 bg-black text-white">
 
-          <div class=" mb-3" style="background-color: red;" data-aos="fade-down"  data-aos-duration="1000">
+          <!-- anime info banner -->
+          <div class=" mb-3 w-100" style="background-color: red;">
+
             <p style="font-size: 30px" >𝖆𝖓𝖎𝖒𝖊 𝖎𝖓𝖋𝖔</p>
+
           </div>
           
           <div class="row" >
-            <div class="col-5" data-aos="fade-right" data-aos-duration="1000" style="margin-top: 2rem">
+
+            <!-- anime desc image  -->
+            <div class="col-5" style="margin-top: 2rem">
+
               <img id="img" :src="anime.desc_image"/>
+
             </div>
 
-            <div class="col-7 mx-auto" data-aos="fade-left" data-aos-duration="1000">
+            <!-- anime information  -->
+            <div class="col-7 mx-auto" >
+
+              <!-- anime information -->
               <div class="card-body">
-                <h3 class="card-title" style="color: red;">{{ anime.name }}</h3>
-                <p class="card-text text-start d-flex flex-wrap" >{{ anime.description }}</p>
-                <p class="card-text text-start">
-                  <strong style="color: red;">Genre: </strong>{{ anime.genre }}
+
+                <!-- anime name -->
+                <h3 class="card-title" style="color: red;">
+                  {{ anime.name }}
+                </h3>
+
+                <!-- anime description  -->
+                <p class="card-text text-start d-flex flex-wrap" >
+                  {{ anime.description }}
                 </p>
+
+                <!-- genre  -->
                 <p class="card-text text-start">
-                  <strong style="color: red;">Released: </strong>{{ anime.dateAired }}
+
+                  <strong style="color: red;">
+                    Genre: 
+                  </strong>
+                  
+                  {{ anime.genre }}
+
                 </p>
+
+                <!-- date  -->
                 <p class="card-text text-start">
-                  <strong style="color: red;">Episodes: </strong>{{ anime.Episodes }}
+                  <strong style="color: red;">
+                    Released: 
+                  </strong>
+                  
+                  {{ anime.dateAired }}
+
                 </p>
+
+                <!-- ep -->
                 <p class="card-text text-start">
-                  <strong style="color: red;">Seasons: </strong>{{ anime.seasonCount }}
+                  <strong style="color: red;">
+                    Episodes: 
+                  </strong>
+                  
+                  {{ anime.Episodes }}
+
                 </p>
+                
+                <!-- seasons  -->
                 <p class="card-text text-start">
-                  <strong style="color: red;">Status: </strong>{{ anime.status }}
+                  <strong style="color: red;">
+                    Seasons: 
+                  </strong>
+                  
+                  {{ anime.seasonCount }}
+
                 </p>
+
+                <!-- status  -->
                 <p class="card-text text-start">
-                  <strong style="color: red;">Alternate Names: </strong>{{ anime.alternative }}
+                  <strong style="color: red;">
+                    Status: 
+                  </strong>
+                  
+                  {{ anime.status }}
+
                 </p>
+
+                <!-- alt names  -->
+                <p class="card-text text-start">
+                  <strong style="color: red;">
+                    Alternate Names: 
+                  </strong>
+                  
+                  {{ anime.alternative }}
+
+                </p>
+
               </div>
+
             </div>
+
           </div>
 
-          <div class="trailer" style="margin-top: 3rem">
+          <div class="trailer w-100" style="margin-top: 3rem">
 
-            <div class=" mb-3" style="height: 4rem; background-color: red;" data-aos="fade-up" data-aos-duration="1000">
+            <div class=" mb-3 " style="height: 4rem; background-color: red;">
               <p style="font-size: 30px">𝖆𝖓𝖎𝖒𝖊 𝖙𝖗𝖆𝖎𝖑𝖊𝖗</p>
             </div>
 
@@ -57,36 +122,43 @@
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
-                data-aos="fade-up" data-aos-duration="1000"
               ></iframe>
             </div>
 
           </div>
         </div>
+
       </div>
 
-      <div></div>
     </div>
+
   </div>
+
+  <!-- if else  -->
   <div v-else>
-    <h2>Loading...</h2>
+    <h2>
+      Loading...
+    </h2>
   </div>
+  
 </template>
 
 <script>
 export default {
   props: ["id"],
-  data() {
-    return {
-      anime: null,
-    };
+
+  mounted() {
+    // Call function created in store
+    this.$store.dispatch("getAnime", this.id);
+
+    AOS.init();
   },
-  async mounted() {
-    await fetch("http://localhost:3000/anime/" + this.id)
-      .then((res) => res.json())
-      .then((data) => (this.anime = data));
-      console.log(AOS);
-      AOS.init();
+
+  computed: {
+    // returns item from function that was called
+    anime() {
+      return this.$store.state.anime;
+    },
   },
 };
 </script>
@@ -110,6 +182,5 @@ export default {
 
 #trailer {
   height: 20rem;
-  width: 100%;
 }
 </style>
