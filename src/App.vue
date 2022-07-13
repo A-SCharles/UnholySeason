@@ -50,23 +50,24 @@
           </router-link>
 
           <div v-if="!user">
-          <router-link :to="{ name: 'login' }">
-            <a style="font-size: 30px;" class="nav-link">
-              Login
-            </a>
-          </router-link>
+            <router-link :to="{ name: 'login' }">
+              <a style="font-size: 30px;" class="nav-link">
+                Login
+              </a>
+            </router-link>
 
-          <router-link :to="{ name: 'register' }">
-            <a style="font-size: 30px;" class="nav-link">
-              Register
-            </a>
-          </router-link>
+            <router-link :to="{ name: 'register' }">
+              <a style="font-size: 30px;" class="nav-link">
+                Register
+              </a>
+            </router-link>
           </div>
 
           <div v-else>
-            <router-link :to="{name: 'account'}">
+            <router-link :to="{ name: 'account' }">
               <h2>Hello {{ user.name }}</h2>
             </router-link>
+            <button class="btn btn-danger" @click="logout">Logout</button>
           </div>
 
         </div>
@@ -80,14 +81,22 @@
 </template>
 
 <script>
+import router from '@/router/index'
+  
 export default {
-    mounted() {
-    
+  mounted() {
+
   },
 
   computed: {
     user() {
       return this.$store.state.user
+    }
+  },
+  methods: {
+    logout() {
+      this.$store.state.user = null
+      router.push({ name: 'home' })
     }
   },
 }

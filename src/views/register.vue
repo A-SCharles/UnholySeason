@@ -6,7 +6,7 @@
         <div class="form-group m-3">
             <!-- firstName -->
             <label for="name"></label>
-            <input id="name" class="form-control" type="text" placeholder="Enter Name">
+            <input id="name" v-model="name" class="form-control" type="text" placeholder="Enter Name">
 
             <!-- email -->
             <label for="email"></label>
