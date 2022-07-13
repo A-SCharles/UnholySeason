@@ -27,7 +27,22 @@ const routes = [
     name: 'anime',
     component: () => import('../views/animeDetail.vue'),
     props: true
-  }
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: () => import('../views/register.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/login.vue')
+  },
+  {
+    path: '/account',
+    name: 'account',
+    component: () => import('../views/account.vue')
+  },
 ]
 
 const router = createRouter({

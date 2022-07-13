@@ -8,9 +8,6 @@
 
     <hr />
 
-    <!-- <div v-for="anime in sorted" :key="anime.id">
-      <h2>{{ anime.id }}</h2>
-    </div> -->
     <div v-if="animes">
       <div class="row">
         <Lists v-for="anime in sorted" :key="anime.id" :anime="anime" />
@@ -39,7 +36,7 @@ export default {
   },
 
   mounted() {
-    this.$store.dispatch("getData")
+    this.$store.dispatch("getAnimes")
   },
 
   computed: {
@@ -47,19 +44,10 @@ export default {
       return this.$store.state.animes
     },
     sorted() {
-      // console.log("im here")
+      // reverses array and limits it to 3
       let sortedA = this.$store.state.animes.reverse()
-      // console.log(sortedA)
       return sortedA.slice(0, 3)
     }
-  },
-  methods: {
-    // sorted() {
-    //   console.log("im here")
-    //   let sortedA = this.$store.state.animes
-    //   console.log(sortedA)
-    //   return sortedA.reverse()
-    // }
   },
 }
 

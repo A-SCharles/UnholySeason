@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 <div class="container">
 <h3>Want to recommend an anime but don't know how?</h3>
 <p>Message one of our admins and they'll upload the anime for you or </p>
@@ -6,11 +7,17 @@
 <p>unholyseason@gmail.com</p>
 </div>
 
+=======
+>>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <h1>Our Admins</h1>
   <div class="carousel-inner">
     <div class="carousel-item active">
+<<<<<<< HEAD
       <img src="https://i.postimg.cc/c4snPzFR/black-girl2.jpg" alt="...">
+=======
+      <img src="https://i.postimg.cc/65JWNJ68/black-girl.webp" alt="...">
+>>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc
       <h3>JT</h3>
       blackgirl@gmail.com
     </div>
@@ -20,7 +27,11 @@
       kenkaneki@gmail.com
     </div>
     <div class="carousel-item">
+<<<<<<< HEAD
       <img src="https://i.postimg.cc/jSyC5Q3x/squirtle2.jpg" alt="...">
+=======
+      <img src="https://i.postimg.cc/dVcvXLc7/Squirtle.jpg" alt="...">
+>>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc
       <h3>AS</h3>
       Squirtle@gmail.com
     </div>
@@ -39,6 +50,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<<<<<<< HEAD
 <h3>Wrtie us a message</h3>
 <div class="container-fluid">
 <form
@@ -53,10 +65,13 @@
 </form>
 </div>
 
+=======
+>>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc
 </template>
 
 <style>
 img{
+<<<<<<< HEAD
     width: 300px;
     height: 300px;
 }
@@ -90,3 +105,10 @@ margin-left: 560px ;
 }
 
 </style>
+=======
+    width: 420px;
+    height: 420px;
+}
+</style>
+
+>>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc

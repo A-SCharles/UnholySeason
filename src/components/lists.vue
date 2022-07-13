@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="card mx-auto" style=" width: 40rem; position:relative; height:350px; margin-bottom: 40px" data-aos="fade-up"
     data-aos-duration="3000">
 
@@ -15,12 +16,40 @@
     </div>
   </div>
 
+=======
+  <div
+    class="card mx-auto"
+    style="width: 40rem; position: relative; height: 350px; margin-bottom: 40px"
+    data-aos="fade-up"
+    data-aos-duration="3000"
+  >
+    <router-link :to="{ name: 'anime', params: { id: anime.id } }">
+      <img
+        :src="anime.anime_Gif"
+        id="show"
+        class="card-img-top img-fluid"
+        style="height: 350px; object-fit: cover"
+      />
+
+      <img
+        :src="anime.image"
+        id="hide"
+        class="card-body img-fluid"
+        style="height: 350px; object-fit: cover"
+      />
+
+      <div class="card-body">
+        <h5 class="card-title">{{ anime.name }}</h5>
+        <p class="card-text"></p>
+      </div>
+    </router-link>
+  </div>
+>>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc
 </template>
 
 <script>
-import store from '@/store';
-
 export default {
+<<<<<<< HEAD
   props: ['anime'],
   // data() {
   //     return {
@@ -41,6 +70,10 @@ export default {
     }
   },
 }
+=======
+  props: ["anime"],
+};
+>>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc
 </script>
 
 <style>
