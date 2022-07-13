@@ -1,5 +1,5 @@
 <template>
-<<<<<<< HEAD
+
   <div class="card mx-auto" style=" width: 40rem; position:relative; height:350px; margin-bottom: 40px" data-aos="fade-up"
     data-aos-duration="3000">
 
@@ -16,7 +16,6 @@
     </div>
   </div>
 
-=======
   <div
     class="card mx-auto"
     style="width: 40rem; position: relative; height: 350px; margin-bottom: 40px"
@@ -49,7 +48,7 @@
 
 <script>
 export default {
-<<<<<<< HEAD
+
   props: ['anime'],
   // data() {
   //     return {
@@ -70,10 +69,8 @@ export default {
     }
   },
 }
-=======
-  props: ["anime"],
-};
->>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc
+
+  props: ["anime"]
 </script>
 
 <style>

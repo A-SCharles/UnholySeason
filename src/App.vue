@@ -36,7 +36,7 @@
 
           </router-link>
           <router-link to="/contact">
-<<<<<<< HEAD
+
             <a style="font-size: 30px;" class="nav-link">
               𝕮𝖔𝖓𝖙𝖆𝖈𝖙
             </a>
@@ -45,8 +45,6 @@
 
           <router-link :to="{ name: 'animes' }">
 
-=======
->>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc
             <a style="font-size: 30px;" class="nav-link">
               𝕮𝖔𝖓𝖙𝖆𝖈𝖙
             </a>
@@ -57,11 +55,7 @@
             <a><i class="fa-solid fa-circle-user"></i></a>
 
           </router-link>
-<<<<<<< HEAD
-      
-=======
-
-
+    
           <router-link :to="{ name: 'animes' }">
             <a style="font-size: 30px;" class="nav-link">
               𝖆𝖓𝖎𝖒𝖊𝖑𝖎𝖘𝖙
@@ -138,7 +132,7 @@ a {
   text-decoration: none;
   color: #FF0000 !important;
 }
-<<<<<<< HEAD
+
 i{
   color:white;
   font-size: xx-large;
@@ -149,8 +143,7 @@ i{
   display: flex !important;
   justify-content: end !important;
 } */
-=======
->>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc
+
 </style>
 
 
