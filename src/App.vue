@@ -82,7 +82,7 @@
 
 <script>
 import router from '@/router/index'
-  
+
 export default {
   mounted() {
 
