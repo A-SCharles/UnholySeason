@@ -5,6 +5,7 @@ export default createStore({
     // variables to store data from JSON
     animes: null,
     anime: null,
+    users: null,
     user: null
   },
   getters: {
@@ -22,9 +23,21 @@ export default createStore({
     // passes retrieved user into user variable
     setUser: (state, user) => {
       state.user = user
+    },
+    //
+    // passes retrieved user into user variable
+    setUsers: (state, users) => {
+      state.users = users
     }
+
   },
   actions: {
+    // Shows all users 
+    getUsers: async (context) => {
+      fetch("http://localhost:3000/users")
+      .then((res) => res.json())
+      .then((users) => context.commit('setUsers', users))
+    },
     // Retrieving all data from JSON file
     getAnimes: async (context)=> {
       fetch("http://localhost:3000/anime")
@@ -56,12 +69,12 @@ export default createStore({
 
     // adds new user to db
     register: async (context, payload) => {
-      const {firstName, lastName, email, password} = payload
+      const {name, email, password} = payload
       fetch("http://localhost:3000/users", {
         method: "POST",
         body: JSON.stringify({
-          firstName: firstName,
-          lastName: lastName,
+          // id: this.users.length +1,
+          name: name,
           email: email,
           password: password,
         }),
@@ -71,6 +84,7 @@ export default createStore({
       })
         .then((response) => response.json())
         .then((json) => context.commit("setUser", json));
+        router.push({name: "login"})
     }
   },
   modules: {

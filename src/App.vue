@@ -1,12 +1,12 @@
 <template>
 
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black">
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-black">
 
     <div class="container">
       <router-link to="/">
-      <a style="font-size: 3vw; color: #FF0000" class="navbar-brand " href="#">
-        𝖀𝖓𝖍𝖔𝖑𝖞 𝕾𝖊𝖆𝖘𝖔𝖓
-      </a>
+        <a style="font-size: 3vw; color: #FF0000" class="navbar-brand " href="#">
+          𝖀𝖓𝖍𝖔𝖑𝖞 𝕾𝖊𝖆𝖘𝖔𝖓
+        </a>
       </router-link>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -49,7 +49,7 @@
             </a>
           </router-link>
 
-          
+          <div v-if="!user">
           <router-link :to="{ name: 'login' }">
             <a style="font-size: 30px;" class="nav-link">
               Login
@@ -58,9 +58,16 @@
 
           <router-link :to="{ name: 'register' }">
             <a style="font-size: 30px;" class="nav-link">
-              | Register
+              Register
             </a>
           </router-link>
+          </div>
+
+          <div v-else>
+            <router-link :to="{name: 'account'}">
+              <h2>Hello {{ user.name }}</h2>
+            </router-link>
+          </div>
 
         </div>
       </div>
@@ -72,7 +79,19 @@
   <router-view />
 </template>
 
-<script></script>
+<script>
+export default {
+    mounted() {
+    
+  },
+
+  computed: {
+    user() {
+      return this.$store.state.user
+    }
+  },
+}
+</script>
 
 <style>
 #app {
@@ -99,7 +118,6 @@ a {
   text-decoration: none;
   color: #FF0000 !important;
 }
-
 </style>
 
 

@@ -30,7 +30,7 @@
     </div>
 
     <div v-if="user">
-      <h2>Login Successful</h2>
+      <h2>{{user.name}} Login  Successful</h2>
     </div>
   </div>
 </template>
@@ -43,9 +43,6 @@ export default {
       password: "",
     };
   },
-  mounted() {
-      
-      },
   methods: {
       // checks if user exists in db
     login() {
