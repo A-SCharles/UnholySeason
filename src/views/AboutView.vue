@@ -96,8 +96,8 @@
 .image {
     position: relative;
     object-fit: cover;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: auto;

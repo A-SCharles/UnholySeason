@@ -1,5 +1,5 @@
 <template>
-  <div v-if="animes" class="bg-dark">
+  <div v-if="animes">
     <div class="container">
       <div class="row">
         <lists v-for="anime of animes" :key="anime.id" :anime="anime" />
