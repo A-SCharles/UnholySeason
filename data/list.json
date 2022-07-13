@@ -167,6 +167,12 @@
       "name": "Charles",
       "email": "charles@gmail.com",
       "password": "password"
+    },
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "id": 2
     }
   ]
 }

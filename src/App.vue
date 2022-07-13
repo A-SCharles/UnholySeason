@@ -43,11 +43,6 @@
           </router-link>
 
 
-          <router-link :to="{ name: 'animes' }">
-            <a style="font-size: 30px;" class="nav-link">
-              𝖆𝖓𝖎𝖒𝖊𝖑𝖎𝖘𝖙
-            </a>
-          </router-link>
 
           <div v-if="!user">
           <router-link :to="{ name: 'login' }">
@@ -64,6 +59,12 @@
           </div>
 
           <div v-else>
+            <router-link :to="{ name: 'animes' }">
+              <a style="font-size: 30px;" class="nav-link">
+                𝖆𝖓𝖎𝖒𝖊𝖑𝖎𝖘𝖙
+              </a>
+            </router-link>
+            
             <router-link :to="{name: 'account'}">
               <h2>Hello {{ user.name }}</h2>
             </router-link>
