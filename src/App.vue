@@ -1,6 +1,6 @@
 <template>
 
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black" style="height: 10vh" >
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black" style="height: 10vh; " >
 
     <div class="container ">
 
