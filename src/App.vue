@@ -48,10 +48,12 @@
             </a>
             
           </router-link>
+          <router-link >
 
-          <font-awesome-icon icon="fa-solid fa-user-secret" inverse />
-          <font-awesome-icon icon="fa-solid fa-user" inverse />
+            <a><i class="fa-solid fa-circle-user"></i></a>
 
+          </router-link>
+      
         </div>
       </div>
     </div>
@@ -94,7 +96,12 @@ a {
   text-decoration: none;
   color: #FF0000 !important;
 }
-
+i{
+  color:white;
+  font-size: xx-large;
+  margin-left:550px ;
+  margin-top: 10px;
+}
 /* #navbarNavAltMarkup{
   display: flex !important;
   justify-content: end !important;
