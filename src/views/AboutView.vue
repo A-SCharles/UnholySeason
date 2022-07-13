@@ -1,51 +1,99 @@
 <template>
-  <div class="about container">
-    <h1  style="color:red">Our Unholy Story</h1>
-    <p style="color:white">What's your favourite season? We like our's a little...Unholy. </p>
-    <p style="color:white">The creators of unholy season wanted to create a safe space where lovers of gore could find community in each other. So scroll through your fellow users recommondations to add to your watch list and recommend some the goriest, horrifying anime you know. We want to hear what you think, afterall this is a place where even the dead tell stories... So remember to comment and interact - no-one likes a dead fish.</p>
-    <p style="color:white">Welcome to our nightmare. I think you're gonna like it.</p> 
 
-    <p style="color:red">P.S. If you are reading this, then you are blissfully unaware of what is creeping up behind you.</p>
-  </div>
-<h1  style="color:red">Our Partners in Crime</h1>
-<div class="image-group">
-<div class="image">
-    <img class="image__img" src="https://i.postimg.cc/W4JCSdLz/hdrs4hh26kd81.jpg" alt="Bricks">
-    <div class="image__overlay image__overlay--blur">
-        <div class="image__title">Xena</div>
-        <p class="image__description">
-            description
-        </p>
+    <div class="about container">
+
+    <h1  style="color:red">𝕺𝖚𝖗 𝖀𝖓𝖍𝖔𝖑𝖞 𝕾𝖙𝖔𝖗𝖞</h1>
+
+    <p style="color:white">What's your favourite season? We like our's a little...Unholy. </p>
+
+    <p style="color:white; margin-left: 6rem; margin-right: 6rem;">
+        The creators of unholy season wanted to create a safe space where lovers of gore could find community in each other. So scroll through your fellow users recommondations to add to your watch list and recommend some the goriest, horrifying anime you know. We want to hear what you think, afterall this is a place where even the dead tell stories... So remember to comment and interact - no-one likes a dead fish.
+    </p>
+
+    <p style="color:white">
+        Welcome to our nightmare. I think you're gonna like it.
+    </p> 
+
+    <p style="color:red">
+        P.S. If you are reading this, then you are blissfully unaware of what is creeping up behind you.
+    </p>
+
     </div>
-</div>
-<div class="image">
-    <img class="image__img" src="https://i.postimg.cc/Bn03LxRN/ken-kaneki.jpg" alt="Bricks">
-    <div class="image__overlay image__overlay--blur">
-        <div class="image__title">Ridhaa</div>
-        <p class="image__description">
-            The silent killer that creeps behind you.
-        </p>
+
+    <div>
+        <h1  style="color:red">
+           ⛧ 𝕺𝖚𝖗 𝕻𝖆𝖗𝖙𝖓𝖊𝖗𝖘 𝖎𝖓 𝕮𝖗𝖎𝖒𝖊 ⛧
+        </h1>
     </div>
-</div>
-<div class="image">
-    <img class="image__img" src="https://i.postimg.cc/c4snPzFR/black-girl2.jpg" alt="Bricks">
-    <div class="image__overlay image__overlay--blur">
-        <div class="image__title">JJ</div>
-        <p class="image__description">
-            Sugar and spice and your torn up guts are the ingredients to create a perfect girl.
-        </p>
+    
+    <div class="image-group row">
+
+        <!-- Xena -->
+        <div class="image col-3">
+            <img class="image__img" src="https://i.postimg.cc/W4JCSdLz/hdrs4hh26kd81.jpg" alt="Bricks" style="height: 300px;">
+
+            <div class="image__overlay image__overlay--blur">   
+
+                <div class="image__title" style='color: red'>
+                    Xena
+                </div>
+
+                <p class="image__description">
+                    clever as the devil and twice as pretty
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ridhaa  -->
+        <div class="image col-3">
+
+            <img class="image__img" src="https://i.postimg.cc/Bn03LxRN/ken-kaneki.jpg" alt="Bricks" style="height: 300px;">
+
+            <div class="image__overlay image__overlay--blur">
+
+                <div class="image__title" style='color: red'>
+                    Ridhaa
+                </div>
+
+                <p class="image__description">
+                    The silent killer that creeps behind you.
+                </p>
+            </div>
+        </div>
+
+        <!-- Joshe -->
+        <div class="image col-3">
+            <img class="image__img" src="https://i.postimg.cc/c4snPzFR/black-girl2.jpg" alt="Bricks" style="height: 300px;">
+
+            <div class="image__overlay image__overlay--blur">
+                <div class="image__title" style='color: red'>
+                    JJ
+                </div>
+
+                <p class="image__description">
+                    Sugar and spice and your torn up guts are the ingredients to create a perfect girl.
+                </p>
+            </div>
+        </div>
+
+        <!-- Charles  -->
+        <div class="image col-3">
+            <img class="image__img" src="https://i.postimg.cc/jSyC5Q3x/squirtle2.jpg" alt="Bricks" style="height: 300px;">
+
+            <div class="image__overlay image__overlay--blur">
+                <div class="image__title" style='color: red'>
+                    Charles
+                </div>
+
+                <p class="image__description">
+                    A kind smile hides the gleam of jaggered fangs.
+                </p>
+            </div>
+        </div>
+
     </div>
-</div>
-<div class="image">
-    <img class="image__img" src="https://i.postimg.cc/jSyC5Q3x/squirtle2.jpg" alt="Bricks">
-    <div class="image__overlay image__overlay--blur">
-        <div class="image__title">Charles</div>
-        <p class="image__description">
-            A kind smile hides the gleam of jaggered fangs.
-        </p>
-    </div>
-</div>
-</div>
+
 </template>
 
 <style>
@@ -64,8 +112,8 @@
 .image {
     position: relative;
     object-fit: cover;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: auto;

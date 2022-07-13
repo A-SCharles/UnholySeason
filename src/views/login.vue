@@ -1,22 +1,34 @@
 <template>
-  <div class="container">
+  <div class="container" style="margin-top: 5rem;">
+
     <div class="row">
-      <form class="w-50 mx-auto bg-white p-5" @submit.prevent="login">
-        <h2>Login</h2>
+
+      <form class="w-50 mx-auto bg-white p-5 form" @submit.prevent="login">
+
+        <h2 style="font-size: 3vw">𝕷𝖔𝖌𝖎𝖓</h2>
+
         <div class="mb-3">
-          <label for="email" class="form-label">Email address:</label>
-          <input type="email" class="form-control" id="email" v-model="email" />
-          <div id="emailHelp" class="form-text">
+
+          <label for="email" class="form-label">
+              Email address:
+          </label>
+
+          <input type="email" class="form-control" id="email" v-model="email" style='border-radius: 20px;'/>
+
+          <div id="emailHelp" class="form-text" style="color: white">
             We'll never share your email with anyone else.
           </div>
+
         </div>
+
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
+
           <input
             type="password"
             class="form-control"
             id="password"
-            v-model="password"
+            v-model="password" style="border-radius: 20px;"
           />
         </div>
         <div class="mb-3 form-check">
@@ -25,7 +37,7 @@
             >Check me out</label
           >
         </div>
-        <button type="submit" class="btn btn-danger">Submit</button>
+        <button type="submit" class="btn" style="background-color: black; color: white; border-radius: 20px; ">Submit</button>
       </form>
     </div>
 
@@ -63,4 +75,9 @@ export default {
 </script>
 
 <style>
+.form{
+  border-radius: 20px;
+  background-color: red !important;
+  color: black;
+}
 </style>
