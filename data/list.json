@@ -1,22 +1,6 @@
 {
   "anime": [
     {
-      "id": 1,
-      "name": "TOMIE",
-      "alternative": "Tomie, Tomie, Ito Junji: Collection Specials, 富江",
-      "image": "https://i.postimg.cc/G2R07gt1/Tomie.webp",
-      "desc_image": "https://i.postimg.cc/SNqTYdfY/89805l.jpg",
-      "anime_Gif": "https://i.postimg.cc/PJyc5yx7/original.gif",
-      "description": "Memories, both good and bad, suffuse the high school experience. Whether it's hanging out with friends or cramming for tests, everyone has something they will remember from that time in their lives.At a certain high school, one class is faced with an event that can cause people to look back on their high school days in sadness: the death of a student.The deceased is not just any student— she 's Tomie Kawakami, a popular girl with an almost otherworldly beauty. Her death was particularly gruesome: her body was dismembered and the pieces scattered. As the class tries to make sense of the situation, they are shocked when a familiar voice calls out to them from the doorway, apologizing for being late. With raven hair and a beauty mark under her left eye, this girl is the spitting image of their murdered classmate. But she can 't actually be Tomie, right?",
-      "Episodes": 2,
-      "seasonCount": 0,
-      "goreLevel": 4,
-      "genre": "Drama, Horror, Supernatural, Josei",
-      "status": "Complete",
-      "studio": "Studio Deen",
-      "dateAired": "Apr 27, 2018 to May 25, 2018"
-    },
-    {
       "id": 2,
       "name": "TOKYO GHOUL",
       "image": "https://i.postimg.cc/pdNpsxtc/Tokyo-Logo-Transparent.png",
@@ -65,22 +49,6 @@
       "dateAired": "Jul 24, 2013"
     },
     {
-      "id": 5,
-      "name": "ANOTHER",
-      "image": "https://i.postimg.cc/8znW1hG9/another-1-removebg-preview.png",
-      "desc_image": "https://i.postimg.cc/15yb730f/7-Fj-Nr668-WLVLGJZE3-Cmw-Xgztj6s.jpg",
-      "anime_Gif": "https://i.postimg.cc/3xwcBzrf/another.gif",
-      "alternative": "Another, Another, アナザー",
-      "description": "In 1972, a popular student in Yomiyama North Middle School's class 3-3 named Misaki passed away during the school year. Since then, the town of Yomiyama has been shrouded by a fearful atmosphere, from the dark secrets hidden deep within.Twenty-six years later, 15-year-old Kouichi Sakakibara transfers into class 3-3 of Yomiyama North and soon after discovers that a strange, gloomy mood seems to hang over all the students. He also finds himself drawn to the mysterious, eyepatch-wearing student Mei Misaki; however, the rest of the class and the teachers seem to treat her like she doesn't exist. Paying no heed to warnings from everyone including Mei herself, Kouichi begins to get closer not only to her, but also to the truth behind the gruesome phenomenon plaguing class 3-3 of Yomiyama North. Another follows Kouichi, Mei, and their classmates as they are pulled into the enigma surrounding a series of inevitable, tragic events—but unraveling the horror of Yomiyama may just cost them the ultimate price",
-      "Episodes": 12,
-      "seasonCount": 1,
-      "goreLevel": 5,
-      "genre": "Mystery, Horror, School, Supernatural, Thriller",
-      "status": "Complete",
-      "studio": "P.A. Works",
-      "dateAired": "Jan 10, 2012 to Mar 27, 2012"
-    },
-    {
       "id": 6,
       "name": "Blood-C",
       "image": "https://i.postimg.cc/x143cCbj/blood-c-518e357e03330.png",
@@ -95,22 +63,6 @@
       "status": "Complete",
       "Studios": "Production I.G",
       "dateAired": "Jul 8, 2011 to Sep 30, 2011"
-    },
-    {
-      "id": 7,
-      "name": "When They Cry",
-      "image": "https://i.postimg.cc/yYq4J51y/when-they-cry-higurashi-5c7dfbf1dd495.png",
-      "desc_image": "https://i.postimg.cc/TPXRw6Mm/MV5-BZDlj-Zj-Jj-MWUt-Ym-I3-NC00-Mzcx-LTll-ZWIt-Mjc4-Nz-Fm-Mz-Rj-Mz-Ew-Xk-Ey-Xk-Fqc-Gde-QXVy-MTA3-OTEy-ODI1-V1-FMjpg-UX1000.jpg",
-      "anime_Gif": "https://i.postimg.cc/wMm673ZJ/higurashi-when-they-cry.gif",
-      "alternative": "Higurashi no Naku Koro ni, When the Cicadas Cry, The Moment the Cicadas Cry, ひぐらしのなく頃に",
-      "description": "Keiichi Maebara has just moved to the quiet little village of Hinamizawa in the summer of 1983, and quickly becomes inseparable friends with schoolmates Rena Ryuuguu, Mion Sonozaki, Satoko Houjou, and Rika Furude. However, darkness lurks underneath the seemingly idyllic life they lead. As the village prepares for its annual festival, Keiichi learns about the local legends surrounding it. To his horror, he discovers that there have been several murders and disappearances in the village in the recent years, and that they all seem to be connected to the festival and the village's patron god, Oyashiro.Keiichi tries to ask his new friends about these incidents, but they are suspiciously silent and refuse to give him the answers he needs.As more and more bizarre events occur, he wonders just what else his friends might be keeping from him, and if he can even trust them at all.When madness and paranoia begin taking root in Keiichi's heart, he will stumble straight into the mysteries at work in Higurashi no Naku Koro ni, a story that is told across multiple arcs.",
-      "Episodes": 26,
-      "seasonCount": 1,
-      "Gore level": "5",
-      "genre": "Dementia, Mystery, Horror, Supernatural, Psychological, Thriller",
-      "status": "Complete",
-      "Studios": "Studios Deen",
-      "dateAired": "Apr 5, 2006 to Sep 27, 2006"
     },
     {
       "id": 8,
