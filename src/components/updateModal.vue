@@ -1,91 +1,231 @@
 <template>
-    <!--  -->
-    <!-- Modal -->
-    <div class="modal modal-xl fade" id="update" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{{ anime.name }}</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-6">
-                            <!-- Address -->
-                            <div class="mb-3">
-                                <label for="editTitle{{index}}" class="form-label">Address</label>
-                                <input class="form-control" type="text" name="editTitle{{index}}"
-                                    id="editTitle{{index}}" value="${item.address}" />
-                            </div>
-
-                            <!-- Type -->
-                            <div class="mb-3">
-                                <label for="editType{{index}}" class="form-label">Type</label>
-                                <input class="form-control" type="text" name="editType{{index}}" id="editType{{index}}"
-                                    value="${item.type}" />
-                            </div>
-
-                            <!-- Location -->
-                            <div class="mb-3">
-                                <label for="editLocation{{index}}" class="form-label">Location</label>
-                                <input class="form-control" type="text" name="editLocation{{index}}"
-                                    id="editLocation{{index}}" value="${item.location}" />
-                            </div>
-
-                            <!-- picture -->
-                            <div class="mb-3">
-                                <label for="editPic{{index}}" class="form-label">Picture</label>
-                                <input class="form-control" type="text" name="editPic{{index}}" id="editPic{{index}}"
-                                    value="${item.picture}" />
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <!-- bedrooms -->
-                            <div class="mb-3">
-                                <label for="editRooms{{index}}" class="form-label">Bedrooms</label>
-                                <input class="form-control" type="text" name="editRooms{{index}}"
-                                    id="editRooms{{index}}" value="${item.bedrooms}" />
-                            </div>
-
-                            <!-- bathrooms -->
-                            <div class="mb-3">
-                                <label for="editBath{{index}}" class="form-label">Bathrooms</label>
-                                <input class="form-control" type="text" name="editBath{{index}}" id="editBath{{index}}"
-                                    value="${item.bathrooms}" />
-                            </div>
-
-                            <!-- garage -->
-                            <div class="mb-3">
-                                <label for="editGarage{{index}}" class="form-label">Garage Space</label>
-                                <input class="form-control" type="text" name="editGarage{{index}}"
-                                    id="editGarage{{index}}" value="${item.garage}" />
-                            </div>
-
-                            <!-- price -->
-                            <div class="mb-3">
-                                <label for="editPrice{{index}}" class="form-label">Price</label>
-                                <input class="form-control" type="text" name="editPrice{{index}}"
-                                    id="editPrice{{index}}" value="${item.price}" />
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" onclick="updateProperty({{index}})" class="btn btn-primary"
-                        data-bs-dismiss="modal">Save changes</button>
-                </div>
-            </div>
+    <div
+    class="modal fade"
+    id="update"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Anime</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
+        <div class="modal-body">
+          <div class="row w-100">
+            <div class="col-4">
+              <!-- name -->
+              <div class="mb-3">
+                <label for="addName" class="form-label">Name:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  v-model="name"
+                  name="addName"
+                  id="addName"
+                  placeholder="Enter Name:"
+                  required
+                />
+              </div>
+
+              <!-- image -->
+              <div class="mb-3">
+                <label for="addImage" class="form-label">Image</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addImage"
+                  id="addType"
+                  v-model="image"
+                  placeholder="Add image url"
+                />
+              </div>
+
+              <!-- Alternate title -->
+              <div class="mb-3">
+                <label for="addAlternate" class="form-label">Alternate</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addAlternate"
+                  id="addAlternate"
+                  v-model="alternate"
+                  placeholder="Alternate Titles"
+                />
+              </div>
+
+              <!-- desc-image -->
+              <div class="mb-3">
+                <label for="addImage_desc" class="form-label"
+                  >Image Description</label
+                >
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addImage_desc"
+                  id="addImage_desc"
+                  v-model="desc_image"
+                  placeholder="Add Image"
+                />
+              </div>
+            </div>
+
+            <div class="col-4">
+              <!-- image gif -->
+              <div class="mb-3">
+                <label for="addGif" class="form-label">Image Gif</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addImage"
+                  id="addType"
+                  v-model="gif"
+                  placeholder="Add Image Gif"
+                />
+              </div>
+
+              <!-- desc -->
+              <div class="mb-3">
+                <label for="addDesc" class="form-label">Description</label>
+                <textarea
+                  class="form-control"
+                  name="addDesc"
+                  id="addDesc"
+                  cols="30"
+                  rows="10"
+                  v-model="desc"
+                ></textarea>
+              </div>
+
+              <!-- episodes -->
+              <div class="mb-3">
+                <label for="addEp" class="form-label">Episodes</label>
+                <input
+                  class="form-control"
+                  type="number"
+                  name="addEp"
+                  id="addEp"
+                  v-model="episodes"
+                  placeholder="episode count"
+                />
+              </div>
+
+              <!-- season -->
+              <div class="mb-3">
+                <label for="addSeason" class="form-label">Seasons</label>
+                <input
+                  class="form-control"
+                  type="number"
+                  name="addSeason"
+                  id="addSeason"
+                  v-model="season"
+                  placeholder="Enter Price"
+                  required
+                />
+              </div>
+            </div>
+            <!-- genre, status, studio, aired -->
+            <div class="col-4">
+              <!-- genre -->
+              <div class="mb-3">
+                <label for="addGenre" class="form-label">Add Genre</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addGenre"
+                  id="addGenre"
+                  v-model="genre"
+                  placeholder="Add Genres"
+                />
+              </div>
+
+              <!-- status -->
+              <div class="mb-3">
+                <label for="addStatus" class="form-label">Status</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addStatus"
+                  id="addStatus"
+                  v-model="status"
+                  placeholder="Status"
+                />
+              </div>
+
+              <!-- studio -->
+              <div class="mb-3">
+                <label for="addStudio" class="form-label">Studio</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addStudio"
+                  id="addStudio"
+                  v-model="studio"
+                  placeholder="Studio"
+                />
+              </div>
+
+              <!-- aired -->
+              <div class="mb-3">
+                <label for="addDate" class="form-label">Date:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addDate"
+                  id="addDate"
+                  v-model="aired"
+                  placeholder="Enter Date"
+                  required
+                />
+              </div>
+
+              <!-- trailer -->
+              <div class="mb-3">
+                <label for="addTrailer" class="form-label">Date:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="addTrailer"
+                  id="addTrailer"
+                  v-model="trailer"
+                  placeholder="Enter Trailer"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              @click="add"
+            >
+              Add Anime
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <!--  -->
+  </div>
 </template>
 
 <script>
 export default {
+    props: ["anime"]
 
 }
 </script>

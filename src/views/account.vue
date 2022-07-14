@@ -39,6 +39,7 @@
               ><i class="fa-solid fa-trash-can"></i
             ></a>
           </td>
+          <UpdateModal :anime="anime" />
         </tr>
       </table>
     </div>
@@ -48,15 +49,17 @@
     <h1>Please Login to view Data</h1>
   </div>
   <!--  -->
-  <CreateModal/>
+  <CreateModal />
+  <!--  -->
   <!--  -->
 </template>
 
 <script>
 import CreateModal from "@/components/createModal.vue";
+import UpdateModal from "@/components/updateModal.vue";
 
 export default {
-  components: { CreateModal },
+  components: { CreateModal, UpdateModal },
   mounted() {
     this.$store.dispatch("getAnimes");
   },
