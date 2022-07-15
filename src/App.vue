@@ -44,7 +44,6 @@
 
           </router-link> -->
 
-<<<<<<< HEAD
           <router-link to="/about">
 
             <a style="font-size: 30px;" class="nav-link">
@@ -99,8 +98,6 @@
             </router-link>
           </div>
 
->>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc
-=======
           <div v-if="!user" class="d-sm-flex d-inline-block">
             <router-link :to="{ name: 'login' }">
               <a style="font-size: 30px" class="nav-link"> 𝕷𝖔𝖌𝖎𝖓 </a>
@@ -128,7 +125,6 @@
             </router-link>
             <button class="btn btn-danger" @click="logout">Logout</button>
           </div>
->>>>>>> 3b38d4d9e472fda5b0ab859537580eb552029105
         </div>
       </div>
     </div>
@@ -181,33 +177,15 @@ a {
   color: #ff0000 !important;
 }
 
-<<<<<<< HEAD
 i{
-=======
-.nav-link:hover {
-  text-shadow: 0px 0px 15px #ff0000;
-  transition: ease-in-out 0.3s;
-}
-
-#logoimg {
-  width: 4rem;
-  height: 4rem;
-}
-
-/* i{
->>>>>>> 3b38d4d9e472fda5b0ab859537580eb552029105
   color:white;
   font-size: xx-large;
   margin-left:550px ;
   margin-top: 10px;
-<<<<<<< HEAD
 }
 /* #navbarNavAltMarkup{
   display: flex !important;
   justify-content: end !important;
 } */
 
-=======
-} */
->>>>>>> 3b38d4d9e472fda5b0ab859537580eb552029105
 </style>
