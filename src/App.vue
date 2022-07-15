@@ -51,6 +51,11 @@
           </div>
 
           <div v-else class="d-flex align-items-center">
+            <!-- anime list page -->
+            <router-link :to="{ name: 'animes' }">
+              <a style="font-size: 30px;" class="nav-link"> 𝕬𝖓𝖎𝖒𝖊𝕷𝖎𝖘𝖙 </a>
+            </router-link>
+
             <!-- about page -->
             <router-link to="/about">
               <a style="font-size: 30px" class="nav-link"> 𝕬𝖇𝖔𝖚𝖙 </a>
@@ -61,16 +66,14 @@
               <a style="font-size: 30px" class="nav-link"> 𝕮𝖔𝖓𝖙𝖆𝖈𝖙 </a>
             </router-link>
 
-            <!-- anime list page -->
-            <router-link :to="{ name: 'animes' }">
-              <a style="font-size: 30px;" class="nav-link"> 𝕬𝖓𝖎𝖒𝖊𝕷𝖎𝖘𝖙 </a>
-            </router-link>
-
-            <router-link :to="{ name: 'account' }">
-              <p style="font-size: 30px; display: flex; align-items: center; margin: 0; float: right;">
-                 <i class="fa-solid fa-user"></i> {{ user.name }}
-              </p>
-            </router-link>
+              <div class="ms-5">
+                <router-link :to="{ name: 'account' }">
+                  <p id="hover" class="text-white text-decoration-underline" style="font-size: 30px; display: flex; align-items: center; margin: 0; float: right;">
+                     <i class="fa-solid fa-user"></i> {{ user.name }}
+                  </p>
+                </router-link>
+              </div>
+              
 
             <button id="navbtn" @click="logout" style="margin-left: 1rem; border-radius: 20px; padding-right: 20px; padding-left: 20px; background-color: red; ">Logout</button>
 
@@ -155,10 +158,5 @@ canvas {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-navbtn{
-  color: black;
-
 }
 </style>

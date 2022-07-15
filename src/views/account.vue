@@ -1,13 +1,13 @@
 <template>
   <div v-if="user">
-    <h2>user: {{ user.name }}</h2>
+    <h2>User: {{ user.name }}</h2>
     <div class="container">
       <table class="table">
         <thead>
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Anime Title</th>
-            <th scope="col">Category</th>
+            <th scope="col">Genres</th>
             <th scope="col">
               <a data-bs-toggle="modal" data-bs-target="#addnew" class="btn">
                 <i class="fa-regular fa-square-plus"></i>
@@ -66,4 +66,10 @@ export default {
 </script>
 
 <style>
+th {
+  color: red;
+}
+td {
+  color:  white;
+}
 </style>
