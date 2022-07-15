@@ -3,7 +3,7 @@
   <!-- anime list div  -->
   <div
     class="card mx-auto m-5 p-0"
-    style="width: 35rem; position: relative; height: 350px; margin-bottom: 40px;"
+    style="width: 35rem; position: relative; height: 350px; margin-bottom: 40px; "
   >
     <!-- anime list info -->
     <router-link :to="{ name: 'anime', params: { id: anime.id } }">
@@ -71,8 +71,8 @@ AOS.init();
   opacity: 0;
   transition: all 0.3s linear;
 
-  height: 350px; 
-  width: 558px;
+  height: 350px !important; 
+  width: 558px  !important;
   border-radius: 20px;
 }
 

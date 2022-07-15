@@ -161,7 +161,7 @@
       "anime_Gif": "https://i.postimg.cc/s2d5XZLP/devilman-crybaby.gif",
       "alternative": "DEVILMAN crybaby",
       "description": "Devils cannot take form without a living host. However, if the will of an individual is strong enough, they can overcome the demon and make its power their own, becoming a Devilman. Weak and unassuming, Akira Fudou has always had a bleeding heart. So when his childhood friend Ryou Asuka asks for his help in uncovering devils, Akira accepts without hesitation. However, to Akira's surprise, the place they go to is Sabbath: an immoral party of debauchery and degeneracy.Amidst bloodshed and death, demons possess the partiers, turning their bodies into grotesque monsters, and begin wreaking havoc.In a reckless attempt to save his best friend, Akira unwittingly merges with the devil Amon and becomes a Devilman, gaining the power to defeat the remaining demons.Though it grants him great power, this new partnership awakens an insatiable and primeval part of Akira.Having the body of a devil but the same crybaby heart, Akira works alongside Ryou, destroying those that harm humanity and his loved ones.",
-      "Episodes": 10,
+      "Episodes": 1,
       "seasonCount": 1,
       "Gore level": "3",
       "genre": "Action, Dementia, Demons, Horror, Supernatural",
@@ -195,6 +195,12 @@
       "email": "charles3@gmail.com",
       "password": "pass",
       "id": 4
+    },
+    {
+      "name": "xena",
+      "email": "vampire@gmail",
+      "password": "xena",
+      "id": 5
     }
   ]
 }

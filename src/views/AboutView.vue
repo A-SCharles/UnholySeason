@@ -14,7 +14,7 @@
       
       <p>Welcome to our nightmare. I think you're gonna like it.</p>
 
-      <p class="text-danger">P.S. If you are reading this, then you are blissfully unaware of what is
+      <p style="color: red">P.S. If you are reading this, then you are blissfully unaware of what is
         creeping up behind you.</p>
     </div>
 

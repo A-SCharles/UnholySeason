@@ -28,7 +28,7 @@
             <div class="col-7 mx-auto" >
 
               <!-- anime information -->
-              <div class="card-body">
+              <div class="card-body" >
 
                 <!-- anime name -->
                 <h3 class="card-title" style="color: red;">
@@ -147,7 +147,7 @@
 export default {
   props: ["id"],
 
-  mounted() {
+   mounted() {
     // Call function created in store
     this.$store.dispatch("getAnime", this.id);
 

@@ -6,7 +6,7 @@
      data-aos-duration="2000">
         𝖂𝖊𝖑𝖈𝖔𝖒𝖊 𝕿𝖔 𝖀𝖓𝖍𝖔𝖑𝖞 𝕾𝖊𝖆𝖘𝖔𝖓
       </h1> <br>
-      <p class="text-center" style="color: red; word-wrap: break-word;" data-aos="fade-up"
+      <p id="landingP" class="text-center" style="color: white; word-wrap: break-word; " data-aos="fade-up"
      data-aos-duration="2000">
         Our site is dedicated to the love of Horror and the diverse variations of it. Some of the content displayed may not be suitable for 
         certain users, so by continuing you are gaining acceptance of that risk. Join us when you are ready for the nightmare to begin  
@@ -16,12 +16,10 @@
   </div>
 
   <div style="height: 20vh; margin-top: 5rem;">
-    <p style='color: #FF0000; font-size: 60px' data-aos="fade-up"
-     data-aos-duration="2000">
+    <p style='color: #FF0000; font-size: 60px'>
       𝕽𝖊𝖈𝖊𝖓𝖙𝖑𝖞 𝖆𝖉𝖉𝖊𝖉
     </p>
-    <p style="color: white" data-aos="fade-up"
-     data-aos-duration="2000">
+    <p style="color: white">
       recently added animes to our wide range of options
     </p>
   </div>
@@ -87,4 +85,10 @@ export default {
   min-height: 100vh;
   background-position: center;
 }
+
+#landingP{
+  /* -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: black; */
+}
+
 </style>
