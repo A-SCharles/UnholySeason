@@ -126,6 +126,18 @@ export default createStore({
       })
         .then((response) => response.json())
         .then(() =>(context.dispatch("getAnimes"))) 
+    },
+    // updates list
+    updateAnime: async (context , anime) => {
+      fetch("http://localhost:3000/anime/" + anime.id, {
+        method: "PUT",
+        body: JSON.stringify(anime),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((res) => res.json())
+        .then(() => (context.dispatch("getAnimes")));
     }
   },
   modules: {
