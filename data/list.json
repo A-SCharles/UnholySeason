@@ -195,6 +195,12 @@
       "email": "charles3@gmail.com",
       "password": "pass",
       "id": 4
+    },
+    {
+      "name": "xena",
+      "email": "vampire@gmail.com",
+      "password": "xena",
+      "id": 5
     }
   ]
 }

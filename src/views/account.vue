@@ -23,23 +23,14 @@
           <!-- icons -->
           <td>
             <!-- Update -->
-            <a
-              type="button"
-              class="btn"
-              data-bs-toggle="modal"
-              data-bs-target="#update"
-              ><i class="fa-solid fa-pen-to-square"></i
-            ></a>
+            <a type="button" class="btn" data-bs-toggle="modal" :data-bs-target="'#update'+anime.id"><i
+                class="fa-solid fa-pen-to-square"></i></a>
 
             <!-- Delete -->
-            <a
-              class="btn"
-              id="delete"
-              @click="$store.dispatch('deleteAnime', anime.id)"
-              ><i class="fa-solid fa-trash-can"></i
-            ></a>
+            <a class="btn" id="delete" @click="$store.dispatch('deleteAnime', anime.id)"><i
+                class="fa-solid fa-trash-can"></i></a>
           </td>
-          <UpdateModal :anime="anime" />
+            <UpdateModal :anime="anime" />
         </tr>
       </table>
     </div>
@@ -50,7 +41,6 @@
   </div>
   <!--  -->
   <CreateModal />
-  <!--  -->
   <!--  -->
 </template>
 
@@ -75,4 +65,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+</style>
