@@ -201,6 +201,12 @@
       "email": "vampire@gmail",
       "password": "xena",
       "id": 5
+    },
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "id": 6
     }
   ]
 }
