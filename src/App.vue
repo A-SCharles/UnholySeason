@@ -11,7 +11,7 @@
         <span style="display: flex; align-items: center">
           <img class="img-fluid navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"></span>
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </router-link>
 
       <div
         class="collapse navbar-collapse justify-content-center"
@@ -76,9 +76,6 @@
 
 <script>
 import router from '@/router/index'
-  
-export default {
-  mounted() {
 
 export default {
   mounted() {},
@@ -86,17 +83,16 @@ export default {
   computed: {
     user() {
       return this.$store.state.user;
-    },
+    }
   },
   methods: {
     logout() {
       this.$store.state.user = null;
       router.push({ name: "home" });
-    },
-  },
+    }
+  }
 }
-},
-}
+
 </script>
 
 <style>

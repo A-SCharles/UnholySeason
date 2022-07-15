@@ -11,6 +11,11 @@
         Our site is dedicated to the love of Horror and the diverse variations of it. Some of the content displayed may not be suitable for 
         certain users, so by continuing you are gaining acceptance of that risk. Join us when you are ready for the nightmare to begin  
       </p>
+      <audio controls autoplay>
+  <source src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1233421525&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" type="audio/mpeg" >
+  <a href="https://soundcloud.com/ic3peak" title="IC3PEAK" target="_blank" style="color: #cccccc; text-decoration: none;">IC3PEAK</a> · <a href="https://soundcloud.com/ic3peak/dead-but-pretty" title="Dead But Pretty" target="_blank" style="color: #cccccc; text-decoration: none;">Dead But Pretty</a>
+  <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1233421525&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/ic3peak" title="IC3PEAK" target="_blank" style="color: #cccccc; text-decoration: none;">IC3PEAK</a> · <a href="https://soundcloud.com/ic3peak/dead-but-pretty" title="Dead But Pretty" target="_blank" style="color: #cccccc; text-decoration: none;">Dead But Pretty</a></div> -->
+</audio>
       </div>
     </div>
   </div>
