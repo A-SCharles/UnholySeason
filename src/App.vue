@@ -50,7 +50,7 @@
             </router-link>
           </div>
 
-          <div v-else class="d-flex">
+          <div v-else class="d-flex align-items-center">
             <!-- about page -->
             <router-link to="/about">
               <a style="font-size: 30px" class="nav-link"> 𝕬𝖇𝖔𝖚𝖙 </a>
@@ -63,13 +63,17 @@
 
             <!-- anime list page -->
             <router-link :to="{ name: 'animes' }">
-              <a style="font-size: 30px" class="nav-link"> 𝕬𝖓𝖎𝖒𝖊𝕷𝖎𝖘𝖙 </a>
+              <a style="font-size: 30px;" class="nav-link"> 𝕬𝖓𝖎𝖒𝖊𝕷𝖎𝖘𝖙 </a>
             </router-link>
 
             <router-link :to="{ name: 'account' }">
-              <h2>Hello {{ user.name }}</h2>
+              <p style="font-size: 30px; display: flex; align-items: center; margin: 0; float: right;">
+                 <i class="fa-solid fa-user"></i> {{ user.name }}
+              </p>
             </router-link>
-            <button class="btn btn-danger" @click="logout">Logout</button>
+
+            <button id="navbtn" @click="logout" style="margin-left: 1rem; border-radius: 20px; padding-right: 20px; padding-left: 20px; background-color: red; ">Logout</button>
+
           </div>
         </div>
       </div>
@@ -77,6 +81,10 @@
   </nav>
 
   <router-view />
+
+  
+  <p class="text-center" style="color: red;">
+©copyright screams of angels 2022 all rights reserved</p>
 </template>
 
 <script>
@@ -139,4 +147,18 @@ a {
   margin-left:550px ;
   margin-top: 10px;
 } */
+
+canvas {
+	display: block;
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+navbtn{
+  color: black;
+
+}
 </style>
