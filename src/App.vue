@@ -3,36 +3,30 @@
   <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-black">
 
     <div class="container">
-
       <!-- Navbar Logo -->
       <router-link to="/">
         <a style="font-size: 3vw; color: #FF0000" class="navbar-brand " href="#">
           𝖀𝖓𝖍𝖔𝖑𝖞 𝕾𝖊𝖆𝖘𝖔𝖓
         </a>
-      </router-link>
-
-      <!-- Collapse Btn -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-
+        <span style="display: flex; align-items: center">
+          <img class="img-fluid navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"></span>
         <span class="navbar-toggler-icon"></span>
-
       </button>
 
-
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarNavAltMarkup"
+      >
         <!-- navbar page links -->
-        <div class="navbar-nav justify-content-between">
-
+        <div class="navbar-nav">
           <!-- home page -->
-          <router-link to="/">
+          <!-- <router-link to="/">
 
             <a style="font-size: 30px;" class="nav-link active" aria-current="page" href="#">
               𝕳𝖔𝖒𝖊
             </a>
 
-          </router-link>
+          </router-link> -->
 
           <!-- about page -->
           <router-link to="/about">
@@ -56,15 +50,7 @@
 
           <div v-if="!user">
             <router-link :to="{ name: 'login' }">
-              <a style="font-size: 30px;" class="nav-link">
-                Login
-              </a>
-            </router-link>
-
-            <router-link :to="{ name: 'register' }">
-              <a style="font-size: 30px;" class="nav-link">
-                Register
-              </a>
+              <a style="font-size: 30px" class="nav-link"> 𝕷𝖔𝖌𝖎𝖓 </a>
             </router-link>
           </div>
 
@@ -80,16 +66,12 @@
             </router-link>
             <button class="btn btn-danger" @click="logout">Logout</button>
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </nav>
-  <router-view />
 
+  <router-view />
 </template>
 
 <script>
@@ -98,19 +80,22 @@ import router from '@/router/index'
 export default {
   mounted() {
 
-  },
+export default {
+  mounted() {},
 
   computed: {
     user() {
-      return this.$store.state.user
-    }
+      return this.$store.state.user;
+    },
   },
   methods: {
     logout() {
-      this.$store.state.user = null
-      router.push({ name: 'home' })
-    }
+      this.$store.state.user = null;
+      router.push({ name: "home" });
+    },
   },
+}
+},
 }
 </script>
 
@@ -138,6 +123,3 @@ a {
   color: #ff0000 !important;
 }
 </style>
-
-
-

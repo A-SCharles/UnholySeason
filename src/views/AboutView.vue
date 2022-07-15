@@ -81,31 +81,19 @@
 </template>
 
 <style>
-.about{
+.image {
+  position: relative;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
 }
-/* .image-group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2);
-  grid-gap: 15px;
-  padding-left: auto;
-  padding-right: auto;
-} */
-.image {
-    position: relative;
-    object-fit: cover;
-    width: 300px;
-    height: 300px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
 .image__img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .image__overlay {
@@ -126,30 +114,30 @@
 }
 
 .image__overlay--blur {
-    backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .image__overlay > * {
-    transform: translateY(20px);
-    transition: transform 0.25s;
+  transform: translateY(20px);
+  transition: transform 0.25s;
 }
 
 .image__overlay:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .image__overlay:hover > * {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .image__title {
-    font-size: 2em;
-    font-weight: bold;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .image__description {
-    font-size: 1.25em;
-    margin-top: 0.25em;
+  font-size: 1.25em;
+  margin-top: 0.25em;
 }
 </style>
 

@@ -82,7 +82,7 @@ export default createStore({
       })
         .then((response) => response.json())
         .then((json) => context.commit("setUser", json));
-      router.push({ name: "login" });
+      router.push({ name: "animes" });
     },
     // Deletes Item from db
     deleteAnime: async (context, id) => {
@@ -92,6 +92,22 @@ export default createStore({
         .then((res) => res.json())
         .then(() => (context.dispatch("getAnimes")));
     },
+    // adds anime from modal in account page
+    addAnime: async (context, anime) => {
+      fetch("http://localhost:3000/anime/", {
+        method: "POST",
+        body: JSON.stringify(
+          anime
+        ),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then(() =>(context.dispatch("getAnimes"))) 
+    }
   },
-  modules: {},
+  modules: {
+
+  },
 });
