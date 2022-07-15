@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <div class="row">
-        <form class="w-50 mx-auto bg-white p-5" @submit.prevent="register">
-        <h2>Register</h2>
+    <div class="row h-75 d-flex justify-content-center align-content-center">
+        <form class="w-50 mx-auto p-5 text-black rounded-5" @submit.prevent="register">
+        <h2 style="font-size: 3vw">𝕽𝖊𝖌𝖎𝖘𝖙𝖊𝖗</h2>
         <div class="form-group m-3">
             <!-- firstName -->
             <label for="name"></label>
-            <input id="name" class="form-control" type="text" placeholder="Enter Name">
+            <input id="name" v-model="name" class="form-control" type="text" placeholder="Enter Name">
 
             <!-- email -->
             <label for="email"></label>
@@ -17,16 +17,12 @@
             <input id="password" v-model="password" class="form-control" type="password"
              placeholder="Choose password">
         </div>
-        <button type="submit" class="btn btn-danger">Register</button>
+        <button type="submit" class="btn btn-dark">Register</button>
       </form>
-    </div>
-
-    <div v-if="user">
-      <h2>Registration Successful</h2>
     </div>
   </div>
 </template>
-<script>
+<script> 
 
 export default {
 data() {
@@ -58,5 +54,10 @@ computed: {
 </script>
 
 <style>
-
+.row {
+  min-height: 80vh;
+}
+form{
+  background-color: red !important;
+}
 </style>

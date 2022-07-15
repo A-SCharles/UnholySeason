@@ -1,33 +1,50 @@
 <template>
-
-  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-black">
-
+  <nav class="navbar sticky-top navbar-expand-sm bg-black">
     <div class="container">
+      <!-- Navbar Logo -->
       <router-link to="/">
-        <a style="font-size: 3vw; color: #FF0000" class="navbar-brand " href="#">
+        <span style="display: flex; align-items: center">
+          <img
+            class="img-fluid"
+            src="https://i.postimg.cc/0jkbPDBf/logo.png"
+            id="logoimg"
+          />
+
+          <!-- <a style="font-size: 3vw; color: #FF0000" class="navbar-brand " href="#">
           𝖀𝖓𝖍𝖔𝖑𝖞 𝕾𝖊𝖆𝖘𝖔𝖓
-        </a>
+        </a> -->
+        </span>
       </router-link>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-
+      <!-- Collapse Btn -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
-
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-
-        <div class="navbar-nav justify-content-between">
-
-          <router-link to="/">
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarNavAltMarkup"
+      >
+        <!-- navbar page links -->
+        <div class="navbar-nav">
+          <!-- home page -->
+          <!-- <router-link to="/">
 
             <a style="font-size: 30px;" class="nav-link active" aria-current="page" href="#">
-              𝖍𝖔𝖒𝖊
+              𝕳𝖔𝖒𝖊
             </a>
 
-          </router-link>
+          </router-link> -->
 
+<<<<<<< HEAD
           <router-link to="/about">
 
             <a style="font-size: 30px;" class="nav-link">
@@ -83,28 +100,61 @@
           </div>
 
 >>>>>>> 1338ab63d38eeb2f8025637f2d807e84ad6304bc
+=======
+          <div v-if="!user" class="d-sm-flex d-inline-block">
+            <router-link :to="{ name: 'login' }">
+              <a style="font-size: 30px" class="nav-link"> 𝕷𝖔𝖌𝖎𝖓 </a>
+            </router-link>
+          </div>
+
+          <div v-else class="d-flex">
+            <!-- about page -->
+            <router-link to="/about">
+              <a style="font-size: 30px" class="nav-link"> 𝕬𝖇𝖔𝖚𝖙 </a>
+            </router-link>
+
+            <!-- contact page -->
+            <router-link to="/contact">
+              <a style="font-size: 30px" class="nav-link"> 𝕮𝖔𝖓𝖙𝖆𝖈𝖙 </a>
+            </router-link>
+
+            <!-- anime list page -->
+            <router-link :to="{ name: 'animes' }">
+              <a style="font-size: 30px" class="nav-link"> 𝕬𝖓𝖎𝖒𝖊𝕷𝖎𝖘𝖙 </a>
+            </router-link>
+
+            <router-link :to="{ name: 'account' }">
+              <h2>Hello {{ user.name }}</h2>
+            </router-link>
+            <button class="btn btn-danger" @click="logout">Logout</button>
+          </div>
+>>>>>>> 3b38d4d9e472fda5b0ab859537580eb552029105
         </div>
       </div>
     </div>
-
   </nav>
-
 
   <router-view />
 </template>
 
 <script>
+import router from "@/router/index";
+
 export default {
-    mounted() {
-    
-  },
+  mounted() {},
 
   computed: {
     user() {
-      return this.$store.state.user
-    }
+      return this.$store.state.user;
+    },
   },
-}
+  methods: {
+    logout() {
+      this.$store.state.user = null;
+      router.push({ name: "home" });
+    },
+  },
+};
 </script>
 
 <style>
@@ -115,13 +165,11 @@ export default {
 
 nav {
   padding: 30px;
-
 }
 
 nav a {
   font-weight: bold;
   color: red;
-
 }
 
 nav a.router-link-exact-active {
@@ -130,21 +178,36 @@ nav a.router-link-exact-active {
 
 a {
   text-decoration: none;
-  color: #FF0000 !important;
+  color: #ff0000 !important;
 }
 
+<<<<<<< HEAD
 i{
+=======
+.nav-link:hover {
+  text-shadow: 0px 0px 15px #ff0000;
+  transition: ease-in-out 0.3s;
+}
+
+#logoimg {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* i{
+>>>>>>> 3b38d4d9e472fda5b0ab859537580eb552029105
   color:white;
   font-size: xx-large;
   margin-left:550px ;
   margin-top: 10px;
+<<<<<<< HEAD
 }
 /* #navbarNavAltMarkup{
   display: flex !important;
   justify-content: end !important;
 } */
 
+=======
+} */
+>>>>>>> 3b38d4d9e472fda5b0ab859537580eb552029105
 </style>
-
-
-
