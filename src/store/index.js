@@ -7,6 +7,7 @@ export default createStore({
     anime: null,
     users: null,
     user: null,
+    asc: true,
   },
   getters: {},
   mutations: {
@@ -26,6 +27,26 @@ export default createStore({
     // passes retrieved user into user variable
     setUsers: (state, users) => {
       state.users = users;
+    },
+    sortAnimesByEpisodes:(state) => {
+      state.animes.sort((a,b) => {
+        return a.Episodes -b.Episodes;
+  
+      });
+      if (!state.asc){
+        state.animes.reverse();
+      }
+      state.asc = !state.asc;
+    },
+    sortAnimesByseasonCount:(state) => {
+      state.animes.sort((a,b) => {
+        return a.seasonCount -b.seasonCount;
+  
+      });
+      if (!state.asc){
+        state.animes.reverse();
+      }
+      state.asc = !state.asc;
     },
   },
   actions: {
@@ -120,6 +141,6 @@ export default createStore({
     }
   },
   modules: {
-
-  },
+    
+  }
 });
