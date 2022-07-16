@@ -1,4 +1,6 @@
 <template>
+<div class="container text-center">
+
   <h1 style="color: #ff0000">𝕺𝖚𝖗 𝕬𝖉𝖒𝖎𝖓𝖘</h1>
   <p style="color: white">
     if you want to contact our admins links are provided to the github and email
@@ -184,9 +186,11 @@
       </button>
     </form>
   </div>
+</div>
+
 </template>
 
-<style>
+<style scoped>
 img {
   width: 300px;
   height: 300px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container text-center">
     <div class="row h-75 d-flex justify-content-center align-content-center">
         <form class="w-50 mx-auto p-5 text-black rounded-5" @submit.prevent="register">
         <h2 style="font-size: 3vw">𝕽𝖊𝖌𝖎𝖘𝖙𝖊𝖗</h2>
@@ -53,7 +53,7 @@ computed: {
 }
 </script>
 
-<style>
+<style scoped>
 .row {
   min-height: 80vh;
 }

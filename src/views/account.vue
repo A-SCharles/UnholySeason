@@ -1,7 +1,7 @@
 <template>
   <div v-if="user">
+    <div class="container text-center">
     <h2>User: {{ user.name }}</h2>
-    <div class="container">
       <table class="table">
         <thead>
           <tr>
@@ -36,7 +36,7 @@
     </div>
   </div>
 
-  <div v-else>
+  <div v-else class="text-center">
     <h1>Please Login to view Data</h1>
   </div>
   <!--  -->
@@ -65,11 +65,15 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 th {
   color: red;
 }
 td {
   color:  white;
+}
+
+i {
+  color: red;
 }
 </style>

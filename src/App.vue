@@ -66,7 +66,7 @@
               <a style="font-size: 30px" class="nav-link"> 𝕮𝖔𝖓𝖙𝖆𝖈𝖙 </a>
             </router-link>
 
-              <div class="ms-5">
+              <div class="ms-5 d-flex justify-content-end">
                 <router-link :to="{ name: 'account' }">
                   <p id="hover" class="text-white text-decoration-underline" style="font-size: 30px; display: flex; align-items: center; margin: 0; float: right;">
                      <i class="fa-solid fa-user"></i> {{ user.name }}
@@ -110,14 +110,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   text-align: center;
   color: #2c3e50;
 }
 
 nav {
-  padding: 30px;
+  padding: 15px;
 }
 
 nav a {
@@ -143,13 +143,6 @@ a {
   width: 4rem;
   height: 4rem;
 }
-
-/* i{
-  color:white;
-  font-size: xx-large;
-  margin-left:550px ;
-  margin-top: 10px;
-} */
 
 canvas {
 	display: block;

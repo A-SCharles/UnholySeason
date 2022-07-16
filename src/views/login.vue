@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container text-center">
     <div class="row d-flex justify-content-center align-content-center">
       <form class="w-50 mx-auto bg-white p-5 form" @submit.prevent="login">
         <h2 style="font-size: 3vw">𝕷𝖔𝖌𝖎𝖓</h2>
@@ -65,7 +65,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .row {
   min-height: 80vh;
 }
@@ -74,5 +74,10 @@ export default {
   border-radius: 20px;
   background-color: red !important;
   color: black;
+}
+
+a {
+  text-decoration: none;
+  color: #ff0000 !important;
 }
 </style>

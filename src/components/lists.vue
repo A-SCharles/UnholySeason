@@ -2,7 +2,7 @@
 
   <!-- anime list div  -->
   <div
-    class="card mx-auto m-5 p-0"
+    class="card text-center mx-auto m-5 p-0"
     style="width: 35rem; position: relative; height: 350px; margin-bottom: 40px; "
   >
     <!-- anime list info -->
@@ -41,7 +41,11 @@ export default {
 AOS.init();
 </script>
 
-<style>
+<style scoped>
+a {
+  text-decoration: none;
+  color: #ff0000 !important;
+}
 .card img {
   height: 125px;
   width: 100%;

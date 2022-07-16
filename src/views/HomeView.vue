@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <div style="height: 20vh; margin-top: 5rem;">
+  <div class="container text-center" style="height: 20vh; margin-top: 5rem;">
     <p style='color: #FF0000; font-size: 60px'>
       𝕽𝖊𝖈𝖊𝖓𝖙𝖑𝖞 𝖆𝖉𝖉𝖊𝖉
     </p>
@@ -71,7 +71,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .home {
   background-image: linear-gradient(
       to bottom,
@@ -84,6 +84,7 @@ export default {
   background-size: cover;
   min-height: 100vh;
   background-position: center;
+  text-align: center;
 }
 
 #landingP{

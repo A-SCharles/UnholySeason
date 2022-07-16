@@ -163,7 +163,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #img {
   /* aspect-ratio: 1; */
   width: 75%;
