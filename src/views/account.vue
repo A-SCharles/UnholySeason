@@ -1,7 +1,7 @@
 <template>
   <div v-if="user">
     <div class="container text-center">
-    <h2>User: {{ user.name }}</h2>
+    <h2 class="text-white">User: {{ user.name }}</h2>
       <table class="table">
         <thead>
           <tr>

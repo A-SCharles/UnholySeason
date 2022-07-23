@@ -1,8 +1,8 @@
 <template>
   <div v-if="animes">
     <div class="container">
-      <div class="row">
-        <div class="col-2">
+      <div class="row mx-auto">
+        <div class="col-6 d-flex justify-content-end">
           <button
             @click="sortEpisodes"
             style="
@@ -16,7 +16,7 @@
           </button>
         </div>
 
-        <div class="col-2">
+        <div class="col-6">
           <button
             @click="sortseasonCount"
             style="
@@ -29,6 +29,7 @@
             Sort By Season Count
           </button>
         </div>
+        <!-- 
         <div class="col-2">
           <input
             type="text"
@@ -84,6 +85,7 @@
             <option value="Science SARU">Science SARU</option>
           </select>
         </div>
+        -->
       </div>
     </div>
 
