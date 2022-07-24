@@ -1,5 +1,4 @@
 <template>
-
   <!-- anime list div  -->
   <div
     class="card text-center mx-auto m-5 p-0"

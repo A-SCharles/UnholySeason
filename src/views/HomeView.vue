@@ -54,7 +54,7 @@ export default {
   },
 
   mounted() {
-    this.$store.dispatch("getAnimes");
+    // this.$store.dispatch("getAnimes");
     AOS.init();
   },
 

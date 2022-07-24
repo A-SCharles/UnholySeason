@@ -128,28 +128,29 @@ export default {
   // },
 
    computed: {
-    animes() {
-      return this.$store.state.animes?.filter(anime => {
-        let isMatch = true;
-        if(!anime.name.toLowerCase().includes(this.search.toLowerCase())) {
-          isMatch = false;
-        }
-        if (this.genre !== "All" && this.genre !== anime.genre) {
-          isMatch = false;
-        }
-        if (this.goreLevel !== "All" && this.goreLevel !== anime.goreLevel) {
-          isMatch = false;
-        }
-        if (this.studio !== "All" && this.studio !== anime.studio) {
-          isMatch = false;
-        }
-        return isMatch;
-      });
-    },
+     animes() {
+       return this.$store.state.animes
+     },
 
-    animes() {
-      return this.$store.state.animes
-    }
+    // animes() {
+    //   return this.$store.state.animes?.filter(anime => {
+    //     let isMatch = true;
+    //     if(!anime.name.toLowerCase().includes(this.search.toLowerCase())) {
+    //       isMatch = false;
+    //     }
+    //     if (this.genre !== "All" && this.genre !== anime.genre) {
+    //       isMatch = false;
+    //     }
+    //     if (this.goreLevel !== "All" && this.goreLevel !== anime.goreLevel) {
+    //       isMatch = false;
+    //     }
+    //     if (this.studio !== "All" && this.studio !== anime.studio) {
+    //       isMatch = false;
+    //     }
+    //     return isMatch;
+    //   });
+    // },
+
   },
 
   methods: {
