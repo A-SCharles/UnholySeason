@@ -69,7 +69,7 @@
               <div class="ms-5 d-flex justify-content-end">
                 <router-link :to="{ name: 'account' }">
                   <p id="hover" class="text-white text-decoration-underline" style="font-size: 30px; display: flex; align-items: center; margin: 0; float: right;">
-                     <i class="fa-solid fa-user"></i> {{ user.name }}
+                     <i class="fa-solid fa-user"></i> {{ user.username }}
                   </p>
                 </router-link>
               </div>

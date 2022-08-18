@@ -33,7 +33,7 @@
     </div>
 
     <div v-if="user">
-      <h2>{{ user.name }} Login Successful</h2>
+      <h2>{{ user.username }} Login Successful</h2>
     </div>
   </div>
 </template>
@@ -49,10 +49,11 @@ export default {
   methods: {
     // checks if user exists in db
     login() {
-      return this.$store.dispatch("login", {
+      const payload = {
         email: this.email,
         password: this.password,
-      });
+      }
+      return this.$store.dispatch("login", payload);
     },
   },
 

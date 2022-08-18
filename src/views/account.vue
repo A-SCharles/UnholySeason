@@ -17,7 +17,7 @@
         </thead>
         <tr v-for="anime in animes" :key="anime.id">
           <td>{{ anime.id }}</td>
-          <td>{{ anime.name }}</td>
+          <td>{{ anime.title }}</td>
           <td>{{ anime.genre }}</td>
 
           <!-- icons -->

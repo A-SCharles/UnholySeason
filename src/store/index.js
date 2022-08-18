@@ -56,73 +56,85 @@ export default createStore({
     getUsers: async (context) => {
       fetch("http://localhost:3000/users")
         .then((res) => res.json())
-        .then((users) => context.commit("setUsers", users));
+        .then((data) => context.commit("setUsers", data.results));
     },
     // Retrieving all data from JSON file
     getAnimes: async (context) => {
-      fetch("http://localhost:3000/anime")
+      await fetch("http://localhost:3000/animes")
         .then((res) => res.json())
-        .then((animes) => context.commit("setAnimes", animes));
+        .then((data) => {
+          context.commit("setAnimes", data.results)
+        });;
     },
+    
     // Retrieves single object in data
     getAnime: async (context, id) => {
-      fetch("http://localhost:3000/anime/" + id)
+      fetch("http://localhost:3000/animes/" + id)
         .then((res) => res.json())
-        .then((anime) => context.commit("setAnime", anime));
+        .then((data) => {
+          let dummy = data.results
+          let anime = {
+            title: dummy[0].title,
+            logo: dummy[0].logo,
+            descimage: dummy[0].descimage,
+            gif: dummy[0].gif,
+            alternate: dummy[0].alternate,
+            description: dummy[0].description,
+            episodes: dummy[0].episodes,
+            seasons: dummy[0].seasons,
+            gorelevel: dummy[0].gorelevel,
+            genre: dummy[0].genre,
+            status: dummy[0].status,
+            Studios: dummy[0].Studios,
+            trailer: dummy[0].trailer
+          }
+          context.commit("setAnime", anime);
+        });
     },
     // Checks if user exists in db
     login: async (context, payload) => {
-      // vars for email and pass
-      // tbh idk wtoif
-      const {
-        email,
-        password
-      } = payload;
-      // putting data from fetch in var, I think
-      const data = await fetch(
-        `http://localhost:3000/users?email=${email}&password=${password}`
-      );
-      //converting that data to GOAT format
-      const userData = await data.json();
-      if (userData.length) {
-        context.commit("setUser", userData[0]);
-        router.push({
-          name: "animes"
-        });
-      } else {
-        router.push({
-          name: "home"
-        });
-      }
+      fetch(`http://localhost:3000/users`, {
+          method: "PATCH",
+          body: JSON.stringify(payload),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          }
+        })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.msg === "Login Successful") {
+            alert(data.msg)
+            context.commit("setUser", data.results);
+            router.push({
+              name: "animes"
+            });
+          } else {
+            alert(data.msg)
+          }
+        })
     },
 
     // adds new user to db
     register: async (context, payload) => {
-      const {
-        name,
-        email,
-        password
-      } = payload;
       fetch("http://localhost:3000/users", {
           method: "POST",
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            password: password,
-          }),
+          body: JSON.stringify(payload),
           headers: {
             "Content-type": "application/json; charset=UTF-8",
           },
         })
         .then((response) => response.json())
-        .then((json) => context.commit("setUser", json));
+        .then((data) => {
+          console.log(data);
+          // context.commit("setUser", data)
+        });
       router.push({
         name: "animes"
       });
     },
     // Deletes Item from db
     deleteAnime: async (context, id) => {
-      fetch("http://localhost:3000/anime/" + id, {
+      fetch("http://localhost:3000/animes/" + id, {
           method: "DELETE",
         })
         .then((res) => res.json())
@@ -130,7 +142,7 @@ export default createStore({
     },
     // adds anime from modal in account page
     addAnime: async (context, anime) => {
-      fetch("http://localhost:3000/anime/", {
+      fetch("http://localhost:3000/animes/", {
           method: "POST",
           body: JSON.stringify(
             anime
@@ -144,7 +156,7 @@ export default createStore({
     },
     // updates list
     updateAnime: async (context, anime) => {
-      fetch("http://localhost:3000/anime/" + anime.id, {
+      fetch("http://localhost:3000/animes/" + anime.id, {
           method: "PUT",
           body: JSON.stringify(anime),
           headers: {
@@ -152,7 +164,10 @@ export default createStore({
           },
         })
         .then((res) => res.json())
-        .then(() => (context.dispatch("getAnimes")));
+        .then((data) => {
+        console.log(data);
+          (context.dispatch("getAnimes"))
+        });
     }
   },
   modules: {

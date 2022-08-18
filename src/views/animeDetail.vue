@@ -20,7 +20,7 @@
             <!-- anime desc image  -->
             <div class="col-5" style="margin-top: 2rem">
 
-              <img id="img" :src="anime.desc_image"/>
+              <img id="img" :src="anime.descimage"/>
 
             </div>
 
@@ -32,7 +32,7 @@
 
                 <!-- anime name -->
                 <h3 class="card-title" style="color: red;">
-                  {{ anime.name }}
+                  {{ anime.title }}
                 </h3>
 
                 <!-- anime description  -->
@@ -52,14 +52,14 @@
                 </p>
 
                 <!-- date  -->
-                <p class="card-text text-start">
+                <!-- <p class="card-text text-start">
                   <strong style="color: red;">
                     Released: 
                   </strong>
                   
                   {{ anime.dateAired }}
 
-                </p>
+                </p> -->
 
                 <!-- ep -->
                 <p class="card-text text-start">
@@ -67,7 +67,7 @@
                     Episodes: 
                   </strong>
                   
-                  {{ anime.Episodes }}
+                  {{ anime.episodes }}
 
                 </p>
                 
@@ -77,7 +77,7 @@
                     Seasons: 
                   </strong>
                   
-                  {{ anime.seasonCount }}
+                  {{ anime.seasons }}
 
                 </p>
 
@@ -97,7 +97,7 @@
                     Alternate Names: 
                   </strong>
                   
-                  {{ anime.alternative }}
+                  {{ anime.alternate }}
 
                 </p>
 

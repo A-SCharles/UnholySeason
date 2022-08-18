@@ -12,14 +12,14 @@
             <!-- name -->
             <div class="mb-3">
               <label for="updateName" class="form-label">Name:</label>
-              <input class="form-control" type="text" v-model="anime.name"
+              <input class="form-control" type="text" v-model="anime.title"
                 placeholder="Enter Name:" required />
             </div>
 
             <!-- episodes -->
             <div class="mb-3">
               <label for="updateEp" class="form-label">Episodes</label>
-              <input class="form-control" type="number" name="updateEp" id="updateEp" v-model="anime.Episodes"
+              <input class="form-control" type="number" name="updateEp" id="updateEp" v-model="anime.episodes"
                 placeholder="episode count" />
             </div>
 
@@ -27,7 +27,7 @@
             <div class="mb-3">
               <label for="updateSeason" class="form-label">Seasons</label>
               <input class="form-control" type="number" name="updateSeason" id="updateSeason"
-                v-model="anime.seasonCount" placeholder="Enter Price" required />
+                v-model="anime.seasons" placeholder="Enter Price" required />
             </div>
             <!-- genre, status, studio, aired -->
             <!-- genre -->

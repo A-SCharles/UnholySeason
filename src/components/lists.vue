@@ -9,7 +9,7 @@
     <router-link :to="{ name: 'anime', params: { id: anime.id } }">
       <!-- anime cover gif  -->
       <img
-        :src="anime.anime_Gif"
+        :src="anime.gif"
         id="show"
         class="card-img-top img-fluid"
         style="height: 350px; object-fit: cover; width: 100%"
@@ -17,14 +17,14 @@
 
       <!-- anime cover logo  -->
       <img
-        :src="anime.image"
+        :src="anime.logo"
         id="hide"
         class="card-body img-fluid p-0"
       />
 
       <!-- anime body display  -->
       <div class="card-body">
-        <h5 class="card-title">{{ anime.name }}</h5>
+        <h5 class="card-title">{{ anime.title }}</h5>
         <p class="card-text"></p>
       </div>
     </router-link>

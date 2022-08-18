@@ -26,7 +26,7 @@
                 <input
                   class="form-control"
                   type="text"
-                  v-model="name"
+                  v-model="title"
                   name="addName"
                   id="addName"
                   placeholder="Enter Name:"
@@ -36,13 +36,13 @@
 
               <!-- image -->
               <div class="mb-3">
-                <label for="addImage" class="form-label">Image</label>
+                <label for="addImage" class="form-label">Add Title Logo</label>
                 <input
                   class="form-control"
                   type="text"
                   name="addImage"
                   id="addType"
-                  v-model="image"
+                  v-model="logo"
                   placeholder="Add image url"
                 />
               </div>
@@ -70,7 +70,7 @@
                   type="text"
                   name="addImage_desc"
                   id="addImage_desc"
-                  v-model="desc_image"
+                  v-model="descimage"
                   placeholder="Add Image"
                 />
               </div>
@@ -124,8 +124,8 @@
                   type="number"
                   name="addSeason"
                   id="addSeason"
-                  v-model="season"
-                  placeholder="Enter Price"
+                  v-model="seasons"
+                  placeholder="Add number of seasons"
                   required
                 />
               </div>
@@ -134,7 +134,7 @@
             <div class="col-4">
               <!-- genre -->
               <div class="mb-3">
-                <label for="addGenre" class="form-label">Add Genre</label>
+                <label for="addGenre" class="form-label">Add Genres</label>
                 <input
                   class="form-control"
                   type="text"
@@ -168,20 +168,6 @@
                   id="addStudio"
                   v-model="studio"
                   placeholder="Studio"
-                />
-              </div>
-
-              <!-- aired -->
-              <div class="mb-3">
-                <label for="addDate" class="form-label">Date:</label>
-                <input
-                  class="form-control"
-                  type="text"
-                  name="addDate"
-                  id="addDate"
-                  v-model="aired"
-                  placeholder="Enter Date"
-                  required
                 />
               </div>
 
@@ -227,38 +213,37 @@
 export default {
   data() {
     return {
-      name: "",
+      title: "",
       alternate: "",
-      image: "",
-      desc_image: "",
+      logo: "",
+      descimage: "",
       gif: "",
       desc: "",
       episodes: "",
-      season: "",
+      seasons: "",
       genre: "",
       status: "",
       studio: "",
-      aired: "",
       trailer: "",
     };
   },
   methods: {
     add() {
-      return this.$store.dispatch("addAnime", {
-        name: this.name,
-        alternative: this.alternate,
-        image: this.image,
-        desc_image: this.desc_image,
-        anime_Gif: this.gif,
+      let anime = {
+        title: this.title,
+        alternate: this.alternate,
+        logo: this.logo,
+        descimage: this.descimage,
+        gif: this.gif,
         description: this.desc,
-        Episodes: this.episodes,
-        seasonCount: this.season,
+        episodes: this.episodes,
+        seasons: this.seasons,
         genre: this.genre,
         status: this.status,
         studio: this.studio,
-        dateAired: this.aired,
         trailer: this.trailer,
-      });
+      }
+      return this.$store.dispatch("addAnime", anime);
     },
   },
 };
