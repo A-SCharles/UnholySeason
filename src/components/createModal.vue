@@ -173,7 +173,7 @@
 
               <!-- trailer -->
               <div class="mb-3">
-                <label for="addTrailer" class="form-label">Date:</label>
+                <label for="addTrailer" class="form-label">Enter Trailer:</label>
                 <input
                   class="form-control"
                   type="text"
@@ -213,18 +213,18 @@
 export default {
   data() {
     return {
+      logo: "https://i.postimg.cc/nLQdPF7F/pngtree-photo-coming-soon-abstract-admin-banner-png-image-7610467.jpg",
+      gif: "https://i.postimg.cc/nLQdPF7F/pngtree-photo-coming-soon-abstract-admin-banner-png-image-7610467.jpg",
+      descimage: "https://i.postimg.cc/nLQdPF7F/pngtree-photo-coming-soon-abstract-admin-banner-png-image-7610467.jpg",
+      status: "Incomplete",
       title: "",
       alternate: "",
-      logo: "",
-      descimage: "",
-      gif: "",
       desc: "",
       episodes: "",
       seasons: "",
       genre: "",
-      status: "",
       studio: "",
-      trailer: "",
+      trailer: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     };
   },
   methods: {
