@@ -66,7 +66,7 @@ export default createStore({
           context.commit("setAnimes", data.results)
         });;
     },
-    
+    // dunno
     // Retrieves single object in data
     getAnime: async (context, id) => {
       fetch("http://localhost:3000/animes/" + id)
