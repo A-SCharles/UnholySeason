@@ -62,6 +62,10 @@
 <script>
 export default {
   props: ["anime"],
+  data() {
+    return {
+    }
+  },
 
   methods: {
     update() {
