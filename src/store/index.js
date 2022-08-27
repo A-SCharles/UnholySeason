@@ -54,13 +54,15 @@ export default createStore({
   actions: {
     // Shows all users
     getUsers: async (context) => {
-      fetch("http://localhost:3000/users")
+      // fetch("http://localhost:3000/users")
+      fetch("https://unholyseasonapi.herokuapp.com/users")
         .then((res) => res.json())
         .then((data) => context.commit("setUsers", data.results));
     },
     // Retrieving all data from JSON file
     getAnimes: async (context) => {
-      await fetch("http://localhost:3000/animes")
+      // await fetch("http://localhost:3000/animes")
+      await fetch("https://unholyseasonapi.herokuapp.com/animes")
         .then((res) => res.json())
         .then((data) => {
           context.commit("setAnimes", data.results)
@@ -69,7 +71,8 @@ export default createStore({
     // dunno
     // Retrieves single object in data
     getAnime: async (context, id) => {
-      fetch("http://localhost:3000/animes/" + id)
+      // fetch("http://localhost:3000/animes/" + id)
+      fetch("https://unholyseasonapi.herokuapp.com/animes/" + id)
         .then((res) => res.json())
         .then((data) => {
           let dummy = data.results
@@ -93,7 +96,8 @@ export default createStore({
     },
     // Checks if user exists in db
     login: async (context, payload) => {
-      fetch(`http://localhost:3000/users`, {
+      // fetch(`http://localhost:3000/users`, {
+      fetch(`https://unholyseasonapi.herokuapp.com/users`, {
           method: "PATCH",
           body: JSON.stringify(payload),
           headers: {
@@ -116,7 +120,8 @@ export default createStore({
 
     // adds new user to db
     register: async (context, payload) => {
-      fetch("http://localhost:3000/users", {
+      // fetch("http://localhost:3000/users", {
+      fetch("https://unholyseasonapi.herokuapp.com/users", {
           method: "POST",
           body: JSON.stringify(payload),
           headers: {
@@ -134,7 +139,7 @@ export default createStore({
     },
     // Deletes Item from db
     deleteAnime: async (context, id) => {
-      fetch("http://localhost:3000/animes/" + id, {
+      fetch("https://unholyseasonapi.herokuapp.com/animes/" + id, {
           method: "DELETE",
         })
         .then((res) => res.json())
@@ -142,7 +147,8 @@ export default createStore({
     },
     // adds anime from modal in account page
     addAnime: async (context, anime) => {
-      fetch("http://localhost:3000/animes/", {
+      // fetch("http://localhost:3000/animes/", {
+      fetch("https://unholyseasonapi.herokuapp.com/animes/", {
           method: "POST",
           body: JSON.stringify(
             anime
@@ -156,7 +162,8 @@ export default createStore({
     },
     // updates list
     updateAnime: async (context, anime) => {
-      fetch("http://localhost:3000/animes/" + anime.id, {
+      // fetch("http://localhost:3000/animes/" + anime.id, {
+      fetch("https://unholyseasonapi.herokuapp.com/animes/" + anime.id, {
           method: "PUT",
           body: JSON.stringify(anime),
           headers: {
