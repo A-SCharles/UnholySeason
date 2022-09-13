@@ -15,5 +15,11 @@ npm run serve
 npm run build
 ```
 
+### Live Link
+```
+https://unholyseason-3ff41.web.app
+```
+
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
