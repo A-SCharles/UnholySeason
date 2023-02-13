@@ -29,63 +29,6 @@
             Sort By Season Count
           </button>
         </div>
-        <!-- 
-        <div class="col-2">
-          <input
-            type="text"
-            class="form-control"
-            v-model="search"
-            placeholder="Search..."
-          />
-        </div>
-        <div class="col-2">
-          <select class="form-control" v-model="genre">
-            <option value="All">Genre</option>
-            <option value="All">All</option>
-            <option value="Horror">Horror</option>
-            <option value="Isekia">Isekia</option>
-            <option value="Amnesia">Amnesia</option>
-            <option value="Drama">Drama</option>
-            <option value="Supernatural">Supernatural</option>
-            <option value="Josei">Josei</option>
-            <option value="Action">Action</option>
-            <option value="Mystery">Mystery</option>
-            <option value="Psychological">Psychological</option>
-            <option value="Thriller">Thriller</option>
-            <option value="Dementia">Dementia</option>
-            <option value="School">School</option>
-            <option value="Vampire">Vampire</option>
-            <option value="Seinen">Seinen</option>
-            <option value="Sci-Fi">Sci-Fi</option>
-          </select>
-        </div>
-        <div class="col-2">
-          <select class="form-control" v-model="goreLevel">
-            <option value="All">Gore Level</option>
-            <option value="All">All</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-        <div class="col-2">
-          <select class="form-control" v-model="studio">
-            <option value="All">Studio</option>
-            <option value="All">All</option>
-            <option value="Studio Deen">Studio Deen</option>
-            <option value="Studio Pierrot">Studio Pierrot</option>
-            <option value="Arms">Arms</option>
-            <option value="Asread">Asread</option>
-            <option value="P.A. Works">P.A. Works</option>
-            <option value="Production I.G">Production I.G</option>
-            <option value="A-1 Pictures">A-1 Pictures</option>
-            <option value="Lerche">Lerche</option>
-            <option value="Science SARU">Science SARU</option>
-          </select>
-        </div>
-        -->
       </div>
     </div>
 

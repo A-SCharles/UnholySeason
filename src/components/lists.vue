@@ -6,7 +6,7 @@
     style="width: 35rem; position: relative; height: 350px; margin-bottom: 40px; "
   >
     <!-- anime list info -->
-    <router-link :to="{ name: 'anime', params: { id: anime.id } }">
+    <router-link :to="{ name: 'anime', params: { id: anime.docid } }">
       <!-- anime cover gif  -->
       <img
         :src="anime.gif"

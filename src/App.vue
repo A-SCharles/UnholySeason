@@ -104,6 +104,7 @@ export default {
   methods: {
     logout() {
       this.$store.state.user = null;
+      localStorage.removeItem('user')
       router.push({ name: "home" });
     },
   },

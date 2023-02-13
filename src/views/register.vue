@@ -14,7 +14,7 @@
             v-model="username"
             class="form-control"
             type="text"
-            placeholder="Enter Name"
+            placeholder="Enter Name" required
           />
 
           <!-- email -->
@@ -24,7 +24,7 @@
             v-model="email"
             class="form-control"
             type="email"
-            placeholder="Enter Email Address"
+            placeholder="Enter Email Address" required
           />
 
           <!-- password -->
@@ -34,7 +34,7 @@
             v-model="password"
             class="form-control"
             type="password"
-            placeholder="Choose password"
+            placeholder="Choose password" required
           />
         </div>
         <button type="submit" class="btn btn-dark">Register</button>
@@ -59,7 +59,7 @@ export default {
       let payload = {
         username: this.username,
         email: this.email,
-        usertype: this.usertype,
+        usertype: "user",
         password: this.password,
       };
       return this.$store.dispatch("register", payload);

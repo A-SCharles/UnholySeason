@@ -27,7 +27,7 @@
                 class="fa-solid fa-pen-to-square"></i></a>
 
             <!-- Delete -->
-            <a class="btn" id="delete" @click="$store.dispatch('deleteAnime', anime.id)"><i
+            <a class="btn" id="delete" @click="$store.dispatch('deleteAnime', anime.docid)"><i
                 class="fa-solid fa-trash-can"></i></a>
           </td>
             <UpdateModal :anime="anime" />

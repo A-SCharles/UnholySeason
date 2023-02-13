@@ -1,14 +1,23 @@
-import {
-  createStore
-} from "vuex";
+import { createStore } from "vuex";
 import router from "@/router/index";
+import {
+  deleteData,
+  getData,
+  getDoc,
+  getSingle,
+  getTable,
+  setData,
+  setDataDoc,
+  updateData,
+} from "./firebase_conn/queries";
+import bcrypt from "bcryptjs";
 export default createStore({
   state: {
     // variables to store data from JSON
     animes: null,
     anime: null,
     users: null,
-    user: null,
+    user: null || JSON.parse(localStorage.getItem("user")),
     asc: true,
   },
   getters: {},
@@ -23,6 +32,7 @@ export default createStore({
     },
     // passes retrieved user into user variable
     setUser: (state, user) => {
+      localStorage.setItem("user", JSON.stringify(user));
       state.user = user;
     },
     //
@@ -33,7 +43,6 @@ export default createStore({
     sortAnimesByEpisodes: (state) => {
       state.animes.sort((a, b) => {
         return a.Episodes - b.Episodes;
-
       });
       if (!state.asc) {
         state.animes.reverse();
@@ -43,7 +52,6 @@ export default createStore({
     sortAnimesByseasonCount: (state) => {
       state.animes.sort((a, b) => {
         return a.seasonCount - b.seasonCount;
-
       });
       if (!state.asc) {
         state.animes.reverse();
@@ -53,131 +61,82 @@ export default createStore({
   },
   actions: {
     // Shows all users
-    getUsers: async (context) => {
-      // fetch("http://localhost:3000/users")
-      fetch("https://unholyseasonapi.herokuapp.com/users")
-        .then((res) => res.json())
-        .then((data) => context.commit("setUsers", data.results));
-    },
+    getUsers: async (context) => {},
     // Retrieving all data from JSON file
     getAnimes: async (context) => {
-      // await fetch("http://localhost:3000/animes")
-      await fetch("https://unholyseasonapi.herokuapp.com/animes")
-        .then((res) => res.json())
-        .then((data) => {
-          context.commit("setAnimes", data.results)
-        });;
+      let data = await getTable("animes");
+      context.commit("setAnimes", data);
     },
-    // dunno
     // Retrieves single object in data
     getAnime: async (context, id) => {
-      // fetch("http://localhost:3000/animes/" + id)
-      fetch("https://unholyseasonapi.herokuapp.com/animes/" + id)
-        .then((res) => res.json())
-        .then((data) => {
-          let dummy = data.results
-          let anime = {
-            title: dummy[0].title,
-            logo: dummy[0].logo,
-            descimage: dummy[0].descimage,
-            gif: dummy[0].gif,
-            alternate: dummy[0].alternate,
-            description: dummy[0].description,
-            episodes: dummy[0].episodes,
-            seasons: dummy[0].seasons,
-            gorelevel: dummy[0].gorelevel,
-            genre: dummy[0].genre,
-            status: dummy[0].status,
-            Studios: dummy[0].Studios,
-            trailer: dummy[0].trailer
-          }
-          context.commit("setAnime", anime);
-        });
+      let data = await getSingle("animes", id);
+      context.commit("setAnime", data);
     },
     // Checks if user exists in db
     login: async (context, payload) => {
-      // fetch(`http://localhost:3000/users`, {
-      fetch(`https://unholyseasonapi.herokuapp.com/users`, {
-          method: "PATCH",
-          body: JSON.stringify(payload),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          }
-        })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.msg === "Login Successful") {
-            alert(data.msg)
-            context.commit("setUser", data.results);
-            router.push({
-              name: "animes"
-            });
+      let data = await getTable("users");
+
+      if (data.length > 0) {
+        let i;
+        let match;
+        for (let index = 0; index < data.length; index++) {
+          if (payload.email === data[index].email) {
+            i = index;
+            console.log(i);
+            console.log("email verified");
           } else {
-            alert(data.msg)
+            console.log("incorrect email");
           }
-        })
+        }
+        match = await bcrypt.compare(payload.password, data[i].password);
+        if (match) {
+          console.log("Correct Password");
+          let user = data[i];
+          context.commit("setUser", user);
+          router.push("animes");
+        } else {
+          console.log("Incorrect Password");
+        }
+      }
     },
 
     // adds new user to db
     register: async (context, payload) => {
-      // fetch("http://localhost:3000/users", {
-      fetch("https://unholyseasonapi.herokuapp.com/users", {
-          method: "POST",
-          body: JSON.stringify(payload),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
-        })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-          // context.commit("setUser", data)
-        });
-      router.push({
-        name: "animes"
-      });
+      let check = await getTable("users");
+      let match = true;
+      let msg = "";
+      for (let i = 0; i < check.length; i++) {
+        if (check[i].email == payload.email) {
+          match = false;
+          msg = "Email Address Exists";
+          console.log(msg);
+        }
+      }
+
+      if (match) {
+        payload.password = await bcrypt.hash(payload.password, 10);
+        console.log(payload);
+        await setData("users", payload);
+      }
+
+      // getDoc('users');
     },
     // Deletes Item from db
     deleteAnime: async (context, id) => {
-      fetch("https://unholyseasonapi.herokuapp.com/animes/" + id, {
-          method: "DELETE",
-        })
-        .then((res) => res.json())
-        .then(() => (context.dispatch("getAnimes")));
+      console.log(id);
+      deleteData('animes', id)
+      context.dispatch('getAnimes')
     },
     // adds anime from modal in account page
     addAnime: async (context, anime) => {
-      // fetch("http://localhost:3000/animes/", {
-      fetch("https://unholyseasonapi.herokuapp.com/animes/", {
-          method: "POST",
-          body: JSON.stringify(
-            anime
-          ),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
-        })
-        .then((response) => response.json())
-        .then(() => (context.dispatch("getAnimes")))
+      setData('animes', anime)
+      context.dispatch('getAnimes')
     },
     // updates list
     updateAnime: async (context, anime) => {
-      // fetch("http://localhost:3000/animes/" + anime.id, {
-      fetch("https://unholyseasonapi.herokuapp.com/animes/" + anime.id, {
-          method: "PUT",
-          body: JSON.stringify(anime),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
-        })
-        .then((res) => res.json())
-        .then((data) => {
-        console.log(data);
-          (context.dispatch("getAnimes"))
-        });
-    }
+      updateData('animes', anime)
+      context.dispatch('getAnimes')
+    },
   },
-  modules: {
-
-  }
+  modules: {},
 });
